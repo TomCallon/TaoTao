@@ -20,9 +20,6 @@
     BOOL  showEnglish;    
 }
 
-
-
-
 @property (nonatomic,assign) NSInteger pageInteger;
 @property (nonatomic,retain) UIButton *backButton;
 @property (nonatomic,retain) UILabel *textLabel;
