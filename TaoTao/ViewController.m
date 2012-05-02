@@ -41,9 +41,6 @@
     
 }
 
-
-
-
 -(void)addContentsButtons :(NSInteger)pageNumbers{
     
     
