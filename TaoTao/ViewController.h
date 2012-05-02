@@ -21,9 +21,7 @@
     
     AVAudioPlayer *_audioPlayer;
     
-    BOOL  showEnglish;
-
-    
+    BOOL  showEnglish;    
 }
 
 @property (nonatomic,assign) NSInteger pageInteger;

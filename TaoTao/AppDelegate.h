@@ -15,6 +15,7 @@
 
 
 }
+
 @property (strong, nonatomic) UIWindow *window;
 - (NSMutableDictionary *)appDict;
 - (sqlite3 *)db;

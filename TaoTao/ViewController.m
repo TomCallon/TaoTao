@@ -437,7 +437,6 @@
         NSLog(@"show Chinese");
         showEnglish = NO;
         [self showPage:pageInteger];
-
     }
     
 }
