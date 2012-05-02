@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A5h-Uy-YGz">
-                                <rect key="frame" x="465" y="700" width="80" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A5h-Uy-YGz">
+                                <rect key="frame" x="423" y="700" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="主菜单">
+                                <state key="normal" title="主菜单" backgroundImage="start@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,11 +27,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WpK-Tg-xyh">
-                                <rect key="frame" x="356" y="700" width="80" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WpK-Tg-xyh">
+                                <rect key="frame" x="263" y="700" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="返回">
+                                <state key="normal" title="返回" backgroundImage="setting@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,29 +72,35 @@
                                     <action selector="pageBackButton:" destination="2" eventType="touchUpInside" id="auA-Co-05Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fiI-Fp-TnT">
-                                <rect key="frame" x="581" y="700" width="80" height="48"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fiI-Fp-TnT">
+                                <rect key="frame" x="588" y="700" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="English">
+                                <state key="normal" title="English" backgroundImage="continue_selection@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="translationButton:" destination="2" eventType="touchUpInside" id="rP6-7Q-xfE"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AUT-ZZ-E38">
-                                <rect key="frame" x="701" y="700" width="80" height="48"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AUT-ZZ-E38">
+                                <rect key="frame" x="749" y="700" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Chinese">
+                                <state key="normal" title="Chinese" backgroundImage="highscore@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="translationButton:" destination="2" eventType="touchUpInside" id="0Td-cc-Gax"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -103,7 +109,7 @@
                     <navigationItem key="navigationItem" id="hL8-EP-dgE"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1250" y="1340"/>
+            <point key="canvasLocation" x="886" y="1388"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="0TZ-8E-AkF">
@@ -114,11 +120,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oZo-Zi-QeP">
-                                <rect key="frame" x="491" y="84" width="115" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oZo-Zi-QeP">
+                                <rect key="frame" x="472" y="120" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="开始阅读">
+                                <state key="normal" title="开始阅读" backgroundImage="start@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -126,14 +132,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="StartReadingButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="euR-p8-KQi"/>
+                                    <action selector="startReadingButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="SpV-Ri-Pry"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y1Z-s5-CGq">
-                                <rect key="frame" x="491" y="232" width="115" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y1Z-s5-CGq">
+                                <rect key="frame" x="472" y="257" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="已学会单词">
+                                <state key="normal" title="已学会单词" backgroundImage="setting@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -141,14 +147,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="MyVacabulariesButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="EWU-6r-Nig"/>
+                                    <action selector="myVacabulariesButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="Y5V-z8-575"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="saQ-fp-aEN">
-                                <rect key="frame" x="491" y="386" width="115" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="saQ-fp-aEN">
+                                <rect key="frame" x="303" y="388" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="设定">
+                                <state key="normal" title="设定" backgroundImage="continue_selection@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -156,14 +162,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="settingsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="KQc-js-65F"/>
+                                    <action selector="settingsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="0XB-al-LWB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9FU-gG-dQT">
-                                <rect key="frame" x="491" y="531" width="115" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9FU-gG-dQT">
+                                <rect key="frame" x="636" y="388" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="关于我们">
+                                <state key="normal" title="关于我们" backgroundImage="highscore@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -171,8 +177,104 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="aboutUsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="bBs-Xy-xdh"/>
+                                    <action selector="aboutUsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="eFI-zP-rA8"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dDF-ec-nuu">
+                                <rect key="frame" x="782" y="185" width="174" height="420"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="giraffe" backgroundImage="giraffe.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="tVr-Oa-hub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ppm-nl-jBx">
+                                <rect key="frame" x="108" y="442" width="282" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Elephant" backgroundImage="elephant.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="Lbm-PX-WMw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5ba-SA-uT2">
+                                <rect key="frame" x="621" y="466" width="231" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Tiger" backgroundImage="tiger.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="nMm-JY-cVg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ijA-X0-Kdm">
+                                <rect key="frame" x="838" y="202" width="87" height="181"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="monkey" backgroundImage="monkey.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animalsButton:" destination="cCD-X9-OKm" eventType="touchUpInside" id="z6v-Q0-fdV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v8b-5d-3o9">
+                                <rect key="frame" x="32" y="35" width="212" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="cloud-1.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="964-y1-ihu">
+                                <rect key="frame" x="679" y="15" width="82" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="cloud-3.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ecf-iu-WeG">
+                                <rect key="frame" x="164" y="42" width="170" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="cloud-2.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -180,6 +282,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="SAl-ux-DDf"/>
                     <connections>
+                        <outlet property="aboutUsButton" destination="9FU-gG-dQT" id="F0o-79-cEc"/>
+                        <outlet property="cloudOneButton" destination="v8b-5d-3o9" id="aHx-jh-v2w"/>
+                        <outlet property="cloudThreeButton" destination="964-y1-ihu" id="FXx-Xg-huc"/>
+                        <outlet property="cloudTwoButton" destination="ecf-iu-WeG" id="Nuf-ni-bR4"/>
+                        <outlet property="elephantButton" destination="ppm-nl-jBx" id="72P-fz-Sp3"/>
+                        <outlet property="girafeButton" destination="dDF-ec-nuu" id="VRY-w8-j9T"/>
+                        <outlet property="monkeyButton" destination="ijA-X0-Kdm" id="dO2-0e-BdH"/>
+                        <outlet property="myVacabulariesButton" destination="y1Z-s5-CGq" id="kHh-hq-DRn"/>
+                        <outlet property="settingsButton" destination="saQ-fp-aEN" id="zC8-Wz-OfJ"/>
+                        <outlet property="startReadingButton" destination="oZo-Zi-QeP" id="xnU-au-hpk"/>
+                        <outlet property="tigerButon" destination="5ba-SA-uT2" id="oaq-U9-zIA"/>
                         <segue destination="z2a-Pi-NHZ" kind="push" identifier="ILearnSegue" id="agd-WG-i4X"/>
                         <segue destination="2" kind="push" identifier="startViewSegue" id="GAj-Wn-ynO"/>
                         <segue destination="exH-Kf-gp3" kind="push" identifier="SettingsSegue" id="PuD-L6-ciW"/>
@@ -187,7 +300,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-75" y="2466"/>
+            <point key="canvasLocation" x="-399" y="1574"/>
         </scene>
         <!--Ilearn Words View Controller-->
         <scene sceneID="3vi-Vn-NTI">
@@ -305,12 +418,23 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-389" y="1394"/>
+            <point key="canvasLocation" x="-1665" y="1722"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cloud-1.png" width="358" height="221"/>
+        <image name="cloud-2.png" width="225" height="147"/>
+        <image name="cloud-3.png" width="408" height="224"/>
+        <image name="continue_selection@2x.png" width="309" height="104"/>
+        <image name="elephant.png" width="308" height="284"/>
+        <image name="giraffe.png" width="183" height="404"/>
+        <image name="highscore@2x.png" width="313" height="102"/>
+        <image name="monkey.png" width="120" height="208"/>
         <image name="next_pressed@2x.png" width="69" height="57"/>
         <image name="replay@2x.png" width="58" height="61"/>
+        <image name="setting@2x.png" width="313" height="102"/>
+        <image name="start@2x.png" width="306" height="108"/>
+        <image name="tiger.png" width="278" height="193"/>
     </resources>
     <classes>
         <class className="AboutUsViewController" superclassName="UIViewController">
@@ -334,10 +458,23 @@
         <class className="StartViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StartViewController.h"/>
             <relationships>
-                <relationship kind="action" name="MyVacabulariesButton:"/>
-                <relationship kind="action" name="StartReadingButton:"/>
                 <relationship kind="action" name="aboutUsButton:"/>
+                <relationship kind="action" name="animalsButton:"/>
+                <relationship kind="action" name="myVacabulariesButton:"/>
                 <relationship kind="action" name="settingsButton:"/>
+                <relationship kind="action" name="startReadingButton:"/>
+                <relationship kind="outlet" name="aboutUsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cloudOneButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cloudThreeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cloudTwoButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="elephantButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="girafeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="monkeyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="moonButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myVacabulariesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="startReadingButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tigerButon" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
@@ -346,6 +483,7 @@
                 <relationship kind="action" name="backButton:"/>
                 <relationship kind="action" name="pageBackButton:"/>
                 <relationship kind="action" name="pageForwardButton:"/>
+                <relationship kind="action" name="translationButton:"/>
             </relationships>
         </class>
     </classes>
