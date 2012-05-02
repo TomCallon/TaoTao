@@ -2,8 +2,6 @@
 
 
 
-//
-
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
@@ -21,6 +19,10 @@
     
     BOOL  showEnglish;    
 }
+
+
+
+
 @property (nonatomic,assign) NSInteger pageInteger;
 @property (nonatomic,retain) UIButton *backButton;
 @property (nonatomic,retain) UILabel *textLabel;
