@@ -20,6 +20,14 @@
 @synthesize pageNumberLabel =_pageNumberLabel;
 @synthesize autoPlayingButton =_autoPlayingButton;
 @synthesize imageView =_imageView;
+
+
+@synthesize showEnglish;
+
+@synthesize audioPlayer = _audioPlayer;
+
+
+
 -(void)dealloc{
     
     
@@ -33,17 +41,116 @@
     
 }
 
+
+
+
+-(void)addContentsButtons :(NSInteger)pageNumbers{
+    
+    
+    if (pageNumbers ==1) {
+        UIButton *taotaoButton;
+        UIButton *elephantButton;
+        UIButton *tigerButton;
+        UIButton *giraffeButton;
+        UIButton *monkeyButton;
+        ///TaoTao
+        taotaoButton = [[UIButton alloc]initWithFrame:CGRectMake(580, 560, 190, 250)];
+        
+        UIImage *taotaoImage = [UIImage imageNamed:@"taotao.png"];
+        [taotaoButton setTag:0];
+        [taotaoButton setBackgroundImage:taotaoImage forState:UIControlStateNormal];
+        
+        [taotaoButton addTarget:self action:@selector(animalButtonWasClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        taotaoButton.backgroundColor = [UIColor clearColor];
+        [taotaoButton setCenter:CGPointMake(550, 520)]; 
+        [taotaoButton removeFromSuperview];
+        [self.view addSubview:taotaoButton];
+        [taotaoButton release];
+        
+        
+        ///elephant
+        elephantButton = [[UIButton alloc]initWithFrame:CGRectMake(480, 485, 200, 300)];
+        UIImage *elephantImage = [UIImage imageNamed:@"elephant.png"];
+        [elephantButton setTag:1];
+        [elephantButton setBackgroundImage:elephantImage forState:UIControlStateNormal];
+        
+        [elephantButton addTarget:self 
+                           action:@selector(animalButtonWasClicked:) 
+                 forControlEvents:UIControlEventTouchUpInside];
+        
+        elephantButton.backgroundColor = [UIColor clearColor];
+        [elephantButton setCenter:CGPointMake(370, 200)];
+        [elephantButton removeFromSuperview];
+        [self.view addSubview:elephantButton];
+        [elephantButton release];
+        
+        
+        ///tiger
+        tigerButton = [[UIButton alloc]initWithFrame:CGRectMake(780, 185, 240, 200)];
+        UIImage *tigerImage = [UIImage imageNamed:@"tiger.png"];
+        [tigerButton setTag:2];
+        
+        [tigerButton setBackgroundImage:tigerImage forState:UIControlStateNormal];
+        [tigerButton addTarget:self 
+                        action:@selector(animalButtonWasClicked:) 
+              forControlEvents:UIControlEventTouchUpInside];
+        
+        tigerButton.backgroundColor = [UIColor clearColor];
+        [tigerButton setCenter:CGPointMake(700, 100)];
+        [tigerButton removeFromSuperview];
+        [self.view addSubview:tigerButton];
+        [tigerButton release];
+        
+        ///giraffe
+        giraffeButton = [[UIButton alloc]initWithFrame:CGRectMake(680, 475, 150, 350)];
+        UIImage *giraffeImage = [UIImage imageNamed:@"giraffe.png"];
+        [giraffeButton setTag:3];
+        [giraffeButton setBackgroundImage:giraffeImage forState:UIControlStateNormal];
+        
+        [giraffeButton addTarget:self 
+                          action:@selector(animalButtonWasClicked:) 
+                forControlEvents:UIControlEventTouchUpInside];
+        
+        giraffeButton.backgroundColor = [UIColor clearColor];
+        [giraffeButton setCenter:CGPointMake(700, 350)]; 
+        [giraffeButton removeFromSuperview];
+        [self.view addSubview:giraffeButton];
+        [giraffeButton release];
+        
+        
+        ///monkey
+        monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
+        UIImage *monkeyImage = [UIImage imageNamed:@"monkey.png"];
+        [monkeyButton setTag:4];
+        [monkeyButton setBackgroundImage:monkeyImage forState:UIControlStateNormal];
+        
+        [monkeyButton addTarget:self 
+                         action:@selector(animalButtonWasClicked:)
+               forControlEvents:UIControlEventTouchUpInside];
+        
+        monkeyButton.backgroundColor = [UIColor clearColor];
+        [monkeyButton setCenter:CGPointMake(710, 300)];  
+        [monkeyButton removeFromSuperview];
+        [self.view addSubview:monkeyButton];
+        [monkeyButton release];
+        
+    }else {
+        
+    }
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
 
-    [self showPage:1];
-    [self addContentsButtons:1];
-
     [self.navigationController.navigationBar setHidden:YES];
-    
+    [self addContentsButtons:1];
+    [self showPage:1];
+
     
     [self.view addSubview: [self backButton]];
     [self.view addSubview:[self textLabel]];
@@ -51,10 +158,12 @@
     [self.view addSubview:[self autoPlayingButton]];
 
 
-
 }
 
 -(UIButton *)backButton {
+    
+    [self.audioPlayer pause];
+
     UIButton *backButt;
     if (_backButton == nil) {
     backButt = [[UIButton alloc]initWithFrame:CGRectMake(10, 10, 70, 50)];
@@ -101,86 +210,55 @@
 
 
 -(void)showPage :(NSInteger)pageNumber {
-    
-    
 
     NSString *pageN = [NSString stringWithFormat:@"%d",pageNumber];
     [_pageNumberLabel setText:pageN];
     
-    NSString *page0 = [NSString stringWithFormat:@"TomCallon"];
-    NSString *page1 = [NSString stringWithFormat:@"        One  day, a  penguin comes to the zoo. And the tiger, elephant, monkey,and giraffe in the zoo say hello to him one after another .” \r\n Taotao says : “Hello ,guys ,I am Taotao”"];  
-    NSString *page2 = [NSString stringWithFormat:@"        Because of the arrival of Taotao,the zoo was crammed with people everyday.All the tourists had taken out their cameras and took little snap shots of cute faces of Taotao.But gradually,the enthusiasm of the tourists declined,and the zoo returned to the normal."];
-    NSString *page3 = [NSString stringWithFormat:@"One night,the gate guard forgot to lock up the door of the zoo,Taotao escaped from the zoo.Outside the zoo were skyscrapers everywhere.The whole city was shining out marvelous light.  Surrounded by the remarkable light,Taotao,didn’t know where to go."];
-    NSString *page4 = [NSString stringWithFormat:@"The sun rose slowly, and with each passing moment, the number of people and cars around Taotao increased .Taotao walked into the middle of the road,interrupting the traffic. People started honking their car horns at him angrily."];
-    NSString *page5 = [NSString stringWithFormat:@"Soon Taotao realized he was so hungry. Fortunately, he met a chef and said,”Mr. Chef,will you be kind enough to give me a fish?”The chef took a look at Taotao,who didn’t have a penny in his pocket, and shook his head reluctantly."];
-    NSString *page6= [NSString stringWithFormat:@"Still hungry, Taotao also realized he was so thirsty. He met a old granny,”Granny,will you be kind enough to give me some water?”Granny pumped her reading glasses and said,”Who are you?”"];
-    NSString *page7 = [NSString stringWithFormat:@"Taotao was so hungry and thirsty that he had to stop.With nowhere else to go, he decided to go back to the zoo. The Tiger, the elephant, the monkey, and the giraffe were all so happy and said,”Taotao,welcome home!“Taotao had travelled the whole city, but realized there was no place like home."];
-    NSArray *pageTextArray = [NSArray arrayWithObjects:page0,page1,page2,page3,page4,page5,page6,page7,nil] ;
     
+    NSString *page0 ;
+    NSString *page1 ;
+    NSString *page2 ;
+    NSString *page3 ;
+    NSString *page4 ;
+    NSString *page5 ;
+    NSString *page6 ;
+    NSString *page7 ;
+    NSArray *pageTextArray;
+    if (showEnglish) {
+        page0 = [NSString stringWithFormat:@"TomCallon"];
+        page1 = [NSString stringWithFormat:@"        One  day, a  penguin comes to the zoo. And the tiger, elephant, monkey,and giraffe in the zoo say hello to him one after another .” \r\n Taotao says : “Hello ,guys ,I am Taotao”"];  
+        page2 = [NSString stringWithFormat:@"        Because of the arrival of Taotao,the zoo was crammed with people everyday.All the tourists had taken out their cameras and took little snap shots of cute faces of Taotao.But gradually,the enthusiasm of the tourists declined,and the zoo returned to the normal."];
+        page3 = [NSString stringWithFormat:@"One night,the gate guard forgot to lock up the door of the zoo,Taotao escaped from the zoo.Outside the zoo were skyscrapers everywhere.The whole city was shining out marvelous light.  Surrounded by the remarkable light,Taotao,didn’t know where to go."];
+        page4 = [NSString stringWithFormat:@"The sun rose slowly, and with each passing moment, the number of people and cars around Taotao increased .Taotao walked into the middle of the road,interrupting the traffic. People started honking their car horns at him angrily."];
+        page5 = [NSString stringWithFormat:@"Soon Taotao realized he was so hungry. Fortunately, he met a chef and said,”Mr. Chef,will you be kind enough to give me a fish?”The chef took a look at Taotao,who didn’t have a penny in his pocket, and shook his head reluctantly."];
+        page6= [NSString stringWithFormat:@"Still hungry, Taotao also realized he was so thirsty. He met a old granny,”Granny,will you be kind enough ]to give me some water?”Granny pumped her reading glasses and said,”Who are you?”"];
+        page7 = [NSString stringWithFormat:@"Taotao was so hungry and thirsty that he had to stop.With nowhere else to go, he decided to go back to the zoo. The Tiger, the elephant, the monkey, and the giraffe were all so happy and said,”Taotao,welcome home!“Taotao had travelled the whole city, but realized there was no place like home."];
+
+    }else {
+        page0 = [NSString stringWithFormat:@"TomCallon"];
+        page1 = [NSString stringWithFormat:@"        今天，动物园来了一只企鹅。动物园里的老虎，大象，猴子，长颈鹿都非常高兴，纷纷跟他打招呼。\r\n大家好，我叫淘淘。”"];  
+        page2 = [NSString stringWithFormat:@"        因为淘淘的出现，动物园每天都人山人海。游客们纷纷拿出相机，拍下淘淘可爱的模样。\r\n渐渐地，游客的热情减退，动物园又恢复了平静。"];
+        page3 = [NSString stringWithFormat:@" 一天晚上，饲养员忘了关门，淘淘，逃出了动物园。动物园门外，是一层又一层的高楼大夏。\r\n这个城市投射着绚丽的光芒，淘淘被刺眼的灯光照射着，不知道往那里走。"];
+        page4 = [NSString stringWithFormat:@"      太阳慢慢地往上爬，行人和车辆越来越多。淘淘走在马路的中央，扰乱了交通，刺耳的汽车鸣笛声不断响起。"];
+        page5 = [NSString stringWithFormat:@"        淘淘肚子饿了，他碰到了一位大厨。\r\n“大厨，给我一条鱼好吗？”\r\n 大厨大量了一下身无分文的淘淘，无奈地摇摇头"];
+        page6 = [NSString stringWithFormat:@"       淘淘口渴啦。他碰到一位老婆婆。\r\n“老婆婆，给我一点水好吗？”\r\n老婆婆用手托了托老花眼镜，疑惑地说你是谁啊？"];
+        page7 = [NSString stringWithFormat:@"       淘淘又饿又渴，停下脚步。原来淘淘已经回到动物园了。\r\n动物园里边的老虎，大象，猴子，长颈鹿都很高兴地和他打招呼：“淘淘，欢饮回家！”"];
+    }
+    pageTextArray = [NSArray arrayWithObjects:page0,page1,page2,page3,page4,page5,page6,page7,nil] ;
+
+        
     CGRect frame;
     CGRect playButtonframe;
-
     NSString *pageText;
+    
     switch (pageInteger) {
         case 1:
             frame = CGRectMake(110, 470, 320, 150);
-            playButtonframe = CGRectMake(450, 650, 70, 70);
-
+            playButtonframe = CGRectMake(400, 550, 70, 70);
             pageText = [pageTextArray objectAtIndex:pageInteger];
             [_textLabel setTextColor:[UIColor brownColor]];
             [_autoPlayingButton setFrame:playButtonframe];
-
-            
-            ///TaoTao
-            UIButton *taotaoButton = [[UIButton alloc]initWithFrame:CGRectMake(580, 560, 190, 250)];
-            
-            UIImage *taotaoImage = [UIImage imageNamed:@"taotao.png"];
-            [taotaoButton setBackgroundImage:taotaoImage forState:UIControlStateNormal];
-            taotaoButton.backgroundColor = [UIColor clearColor];
-            [taotaoButton setCenter:CGPointMake(550, 520)];   
-            [self.view addSubview:taotaoButton];
-            
-            ///elephant
-            UIButton *elephantButton = [[UIButton alloc]initWithFrame:CGRectMake(480, 485, 200, 300)];
-            UIImage *elephantImage = [UIImage imageNamed:@"elephant.png"];
-            [elephantButton setBackgroundImage:elephantImage forState:UIControlStateNormal];
-            elephantButton.backgroundColor = [UIColor clearColor];
-            [elephantButton setCenter:CGPointMake(500, 200)];
-            [self.view addSubview:elephantButton];
-            
-                       
-            
-            ///tiger
-            UIButton *tigerButton = [[UIButton alloc]initWithFrame:CGRectMake(780, 185, 240, 230)];
-            UIImage *tigerImage = [UIImage imageNamed:@"tiger.png"];
-            [tigerButton setBackgroundImage:tigerImage forState:UIControlStateNormal];
-            tigerButton.backgroundColor = [UIColor clearColor];
-            [tigerButton setCenter:CGPointMake(680, 100)];   
-            [self.view addSubview:tigerButton];
-            
-            ///giraffe
-            UIButton *giraffeButton = [[UIButton alloc]initWithFrame:CGRectMake(680, 475, 170, 360)];
-            UIImage *giraffeImage = [UIImage imageNamed:@"giraffe.png"];
-            [giraffeButton setBackgroundImage:giraffeImage forState:UIControlStateNormal];
-            giraffeButton.backgroundColor = [UIColor clearColor];
-            [giraffeButton setCenter:CGPointMake(700, 330)];   
-            [self.view addSubview:giraffeButton];
-            
-            ///monkey
-            UIButton *monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-            UIImage *monkeyImage = [UIImage imageNamed:@"monkey.png"];
-            [monkeyButton setBackgroundImage:monkeyImage forState:UIControlStateNormal];
-            monkeyButton.backgroundColor = [UIColor clearColor];
-            [monkeyButton setCenter:CGPointMake(700, 250)];   
-            [self.view addSubview:monkeyButton];
-
-
-            
-            
-            
-
-            
-            
+            [self addContentsButtons:pageInteger];
             break;
         case 2:
             frame = CGRectMake(220, 40, 380, 150);
@@ -189,8 +267,6 @@
             playButtonframe = CGRectMake(600, 150, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
             [_autoPlayingButton setCenter:CGPointMake(600, 190)];
-
-
             break;
         case 3:
             frame = CGRectMake(80, 523, 390, 150);
@@ -199,7 +275,6 @@
             playButtonframe = CGRectMake(430, 625, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
             [_autoPlayingButton setCenter:CGPointMake(470, 670)];
-
             break;
         case 4:
             frame = CGRectMake(510, 20, 320, 150);
@@ -208,8 +283,6 @@
             playButtonframe = CGRectMake(780, 120, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
             [_autoPlayingButton setCenter:CGPointMake(830, 170)];
-
-
             break;
         case 5:
             frame = CGRectMake(650, 470, 320, 150);
@@ -218,7 +291,6 @@
             playButtonframe = CGRectMake(930, 570, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
             [_autoPlayingButton setCenter:CGPointMake(970, 620)];
-
             break;
         case 6:
             frame = CGRectMake(610, 43, 350, 150);
@@ -227,8 +299,6 @@
             playButtonframe = CGRectMake(960, 200, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
             [_autoPlayingButton setCenter:CGPointMake(960, 190)];
-
-
             break;
         case 7:
             frame = CGRectMake(350, 500, 320, 180);
@@ -237,7 +307,6 @@
             playButtonframe = CGRectMake(670, 680, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
             [_autoPlayingButton setCenter:CGPointMake(670, 680)];
-
             break;
         default:
             break;
@@ -263,16 +332,56 @@
 }
 
 
--(void)addContentsButtons :(NSInteger)buttonNumbers{
+-(void)animalButtonWasClicked :(UIButton *)sender{
 
+    UIButton *animalButton = (UIButton *)sender;
+    NSInteger ANIMALS ;
+    enum ANIMALS {
+        TAOTAOBUTTON =0,
+        ELEPHANTBUTTON ,
+        TIGERBUTTON,
+        GIRAFFEBUTTON,
+        MONKEYBUTTON
+    };
     
+    ANIMALS =  [animalButton tag];
     
-    
+    switch (ANIMALS) {
+        case TAOTAOBUTTON:
+            NSLog(@"I AM A ELEPHANT");
+            [self  PlayAudio:@"penguin"];
+            break;
+        case ELEPHANTBUTTON:
+            NSLog(@"I AM A ELEPHANT");
+            [self  PlayAudio:@"elephant"];
+            break;
+        case TIGERBUTTON:
+            NSLog(@"I AM A TIGER");
+            [self PlayAudio: @"tiger"];
+            break;
+        case GIRAFFEBUTTON:
+            NSLog(@"I AM A GIRAFFE");
+            [self PlayAudio:@"giraffe"];
+            
+            break;
+        case MONKEYBUTTON:
+            NSLog(@"I AM A MONKEY");
+            [self PlayAudio :@"monkey"];
+            
+            break;
+        default:
+            break;
+    }        
+
 }
+
+
+
 
 - (IBAction)pageBackButton:(id)sender {
      
-    
+    [self.audioPlayer pause];
+
     
     NSLog(@" click pageBack Button");
     NSInteger count = 1;
@@ -291,7 +400,8 @@
 
 
 - (IBAction)pageForwardButton:(id)sender {
-    
+    [self.audioPlayer pause];
+
     NSLog(@" click pageForward Button");
     NSInteger count = 1;
     
@@ -309,6 +419,27 @@
 {
 
     [self TomCallonpopViewController];    
+}
+
+- (IBAction)translationButton:(id)sender {
+    
+    UIButton *translationButton = (UIButton *)sender;
+    
+    //show English
+    if ([translationButton tag] ==5) {
+        NSLog(@"show Engish");
+        showEnglish = YES;
+        [self showPage:pageInteger];
+        
+    }
+    ///show Chinese
+    else {
+        NSLog(@"show Chinese");
+        showEnglish = NO;
+        [self showPage:pageInteger];
+
+    }
+    
 }
 
 
@@ -345,6 +476,76 @@
 	NSString *str = state ? @"1" : @"0";
 	[[SF Dict] setObject:str forKey:@"autoPlaying"];
     [sender setImage:[self autoPlayingImage] forState:UIControlStateNormal];
+    
+    
+    ////paue current playing music
+    [self.audioPlayer pause];
+    
+    
+    NSString *pageNumber;
+    NSString *appendingString;
+    switch (pageInteger) {
+        case 1:
+        appendingString = @"1";
+            break;
+        case 2:
+            appendingString =@"2";
+            break;
+        case 3:
+            appendingString = @"3";
+            break;
+        case 4:
+            appendingString =@"4";
+            break;
+        case 5:
+            appendingString =@"5";
+            break;
+        case 6:
+            appendingString =@"6";
+            break;
+        case 7:
+            appendingString =@"7";
+            break;
+        default:
+            break;
+    }
+    
+//    ////播放英文录音
+//    if (showEnglish) {
+//        pageNumber = [NSString stringWithFormat:@"%@",appendingString]; 
+//    }else {
+//    ////播放中文录音
+//        pageNumber = [NSString stringWithFormat:@"%@",appendingString];
+//    }
+    pageNumber = [NSString stringWithFormat:@"%@",appendingString];
+
+    [self PlayAudio:pageNumber];
+    
+    
+}
+
+
+- (void )PlayAudio: (NSString *)who{
+    
+	NSString *musicPath = [[NSBundle mainBundle] pathForResource:who ofType:@"mp3"];
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:musicPath];
+    
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    // 创建播放器
+    self.audioPlayer= player; //赋值给自己定义的类变量
+    [url release];
+    [player release];
+    
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer setVolume:9];
+    self.audioPlayer.numberOfLoops = 1; //设置音乐播放次数  -1为一直循环
+    //    if(mainMusicStatus)
+    //    {
+    //        [myBackMusic play]; //播放
+    //    }
+    
+    [self.audioPlayer play];
+    
 }
 
 

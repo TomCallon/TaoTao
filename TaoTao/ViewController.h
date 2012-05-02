@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+
 @interface ViewController : UIViewController<AVAudioPlayerDelegate>
 
 {
@@ -17,6 +18,11 @@
     UILabel    *_pageNumberLabel;
     UIButton *_autoPlayingButton;
     UIImageView       *_imageView;
+    
+    AVAudioPlayer *_audioPlayer;
+    
+    BOOL  showEnglish;
+
     
 }
 
@@ -28,7 +34,8 @@
 @property (nonatomic,retain) UIImageView     *imageView;
 
 
-
+@property (nonatomic,assign) BOOL showEnglish;
+@property (nonatomic,retain) AVAudioPlayer *audioPlayer;
 
 
 - (IBAction)pageBackButton:(id)sender;
@@ -36,6 +43,8 @@
 - (IBAction)pageForwardButton:(id)sender;
 
 - (IBAction)backButton:(id)sender;
+
+- (IBAction)translationButton:(id)sender;
 
 
 @end
