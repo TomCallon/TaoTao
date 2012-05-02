@@ -32,11 +32,11 @@
     
     
     [super dealloc];
-//    [_backButton release];
-//    [_textLabel release];
-//    [_pageNumberLabel release];
-//    [_autoPlayingButton release];
-//    [_imageView release];
+    [_backButton release];
+    [_textLabel release];
+    [_pageNumberLabel release];
+    [_autoPlayingButton release];
+    [_imageView release];
 
     
 }
