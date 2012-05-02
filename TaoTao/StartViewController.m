@@ -65,13 +65,11 @@
     [_cloudOneButton release];
     [_cloudTwoButton release];
     [_cloudThreeButton release];
-    
 
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     
-   
     [self addAllSystemTheButtons]; 
     [self showMenu];
     [self showAnimals];
