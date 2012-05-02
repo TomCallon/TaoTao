@@ -29,7 +29,7 @@
     
     
     ///environment
-    UIButton *_moonButton;
+    UIButton *_taotaoButton;
     UIButton *_cloudOneButton;
     UIButton *_cloudTwoButton;
     UIButton *_cloudThreeButton;
@@ -61,7 +61,7 @@
 @property (nonatomic,retain) IBOutlet UIButton *monkeyButton;
 
 ////environments
-@property (nonatomic,retain) IBOutlet UIButton *moonButton;
+@property (nonatomic,retain) IBOutlet UIButton *taotaoButton;
 @property (nonatomic,retain) IBOutlet UIButton *cloudOneButton;
 @property (nonatomic,retain) IBOutlet UIButton *cloudTwoButton;
 @property (nonatomic,retain) IBOutlet UIButton *cloudThreeButton;

@@ -27,7 +27,7 @@
 @synthesize monkeyButton =_monkeyButton;
 
 ///environments
-@synthesize moonButton =_moonButton;
+@synthesize taotaoButton =_taotaoButton;
 @synthesize cloudOneButton =_cloudOneButton;
 @synthesize cloudTwoButton =_cloudTwoButton;
 @synthesize cloudThreeButton =_cloudThreeButton;
@@ -61,6 +61,7 @@
     [_giraffeButton release];
     [_elephantButton release];
     [_monkeyButton release];
+    [_taotaoButton release];
     
     [_cloudOneButton release];
     [_cloudTwoButton release];
@@ -88,7 +89,19 @@
     self.navigationController.navigationBarHidden = YES;
     UIImage *background = [UIImage imageNamed:@"background.png"];
     UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:background];
-    [backgroundImageView setFrame:CGRectMake(0, 0, 1024, 768)];
+    
+    
+    CGRect  iPadFrame   = CGRectMake(0, 0, 1024, 768);
+    CGRect  iPhoneFrame = CGRectMake(0, 0, 480, 320);
+    CGRect  iOSFrame;
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+        iOSFrame = iPadFrame;
+    }else {
+        iOSFrame = iPhoneFrame;
+    };
+
+    [backgroundImageView setFrame:iOSFrame];
     [self.view insertSubview:backgroundImageView atIndex:0];
     [backgroundImageView release];
     
@@ -114,7 +127,6 @@
     [self setGirafeButton:nil];
     [self setElephantButton:nil];
     [self setMonkeyButton:nil];
-    
     
     
     [self setCloudOneButton:nil];
@@ -229,7 +241,7 @@
     [self addAnimationToAnimalsButton:_tigerButton];
     [self addAnimationToAnimalsButton:_giraffeButton];
     [self addAnimationToAnimalsButton:_monkeyButton];
-
+    [self addAnimationToAnimalsButton:_taotaoButton];
 
 }
 -(void)showEnvironments{
@@ -243,14 +255,7 @@
     
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
-}
+
 
 -(void)removeAllTheButtons{
 
@@ -267,6 +272,7 @@
     [self.view addSubview:_settingsButton];
     [self.view addSubview:_myVacabulariesButton];
     [self.view addSubview:_aboutUsButton];
+    
 }
 
 -(void)removeAllTheEnvironmentButton{
@@ -319,7 +325,8 @@
         elephantButton = 1,
         tigerButton,
         giraffeButton,
-        monkeyButton
+        monkeyButton,
+        taotaoButton
     };
     
     ANIMALS =  [animalButton  tag];
@@ -342,7 +349,9 @@
         case monkeyButton:
             NSLog(@"I AM A MONKEY");
             [self PlayAudio :@"monkey"];
-
+        case taotaoButton:
+            NSLog(@"I AM A TAOTAO");
+            [self PlayAudio :@"penguin"];
             break;
         default:
             break;
@@ -363,7 +372,7 @@
     
     [self.audioPlayer prepareToPlay];
     [self.audioPlayer setVolume:9];
-    self.audioPlayer.numberOfLoops = 1; //设置音乐播放次数  -1为一直循环
+    self.audioPlayer.numberOfLoops = 0; //设置音乐播放次数  -1为一直循环
 //    if(mainMusicStatus)
 //    {
 //        [myBackMusic play]; //播放
@@ -401,7 +410,16 @@
 
 
 
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        
+        return (UIInterfaceOrientationLandscapeLeft == interfaceOrientation ||
+                UIInterfaceOrientationLandscapeRight == interfaceOrientation);
+    } else {
+        return YES;
+    }
+}
 
 
 

@@ -20,7 +20,7 @@
 @synthesize textLabel = _textLabel;
 @synthesize pageNumberLabel =_pageNumberLabel;
 @synthesize autoPlayingButton =_autoPlayingButton;
-
+@synthesize currentView = _currentView;
 
 @synthesize showEnglish;
 
@@ -43,7 +43,20 @@
 
 -(void)addContentsButtons :(NSInteger)pageNumbers{
     
-    CGRect frame = CGRectMake(0, 0, 1024, 680);
+    
+    CGRect  iPadFrame   = CGRectMake(0, 0, 1024, 680);
+    CGRect  iPhoneFrame = CGRectMake(0, 0, 480, 280);
+    CGRect  iOSFrame;
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+        iOSFrame = iPadFrame;
+    }else {
+        iOSFrame = iPhoneFrame;
+    };
+
+    CGRect frame = iOSFrame;
+    
+    
     UIView *page1View = [[UIView alloc]initWithFrame:frame];
     page1View.backgroundColor = [UIColor clearColor];
     
@@ -70,6 +83,8 @@
     UIButton *tigerButton;
     UIButton *giraffeButton;
     UIButton *monkeyButton;
+    
+    
     ///TaoTao
     taotaoButton = [[UIButton alloc]initWithFrame:CGRectMake(580, 560, 190, 250)];
     
@@ -82,6 +97,10 @@
     taotaoButton.backgroundColor = [UIColor clearColor];
     [taotaoButton setCenter:CGPointMake(550, 520)]; 
     [taotaoButton removeFromSuperview];
+    
+    
+    
+    
     [page1View addSubview:taotaoButton];
     [taotaoButton release];
     
@@ -99,7 +118,7 @@
     elephantButton.backgroundColor = [UIColor clearColor];
     [elephantButton setCenter:CGPointMake(370, 200)];
     [elephantButton removeFromSuperview];
-    [page1View addSubview:elephantButton];
+    [page2View addSubview:elephantButton];
     [elephantButton release];
     
     
@@ -116,12 +135,12 @@
     tigerButton.backgroundColor = [UIColor clearColor];
     [tigerButton setCenter:CGPointMake(700, 100)];
     [tigerButton removeFromSuperview];
-    [page1View addSubview:tigerButton];
+    [page3View addSubview:tigerButton];
     [tigerButton release];
     
     ///giraffe
     giraffeButton = [[UIButton alloc]initWithFrame:CGRectMake(680, 475, 150, 350)];
-    UIImage *giraffeImage = [UIImage imageNamed:@"giraffe.png"];
+    UIImage *giraffeImage = [UIImage imageNamed:@"37.png"];
     [giraffeButton setTag:3];
     [giraffeButton setBackgroundImage:giraffeImage forState:UIControlStateNormal];
     
@@ -132,7 +151,7 @@
     giraffeButton.backgroundColor = [UIColor clearColor];
     [giraffeButton setCenter:CGPointMake(700, 350)]; 
     [giraffeButton removeFromSuperview];
-    [page1View addSubview:giraffeButton];
+    [page4View addSubview:giraffeButton];
     [giraffeButton release];
     
     
@@ -149,54 +168,133 @@
     monkeyButton.backgroundColor = [UIColor clearColor];
     [monkeyButton setCenter:CGPointMake(710, 300)];  
     [monkeyButton removeFromSuperview];
-    [page1View addSubview:monkeyButton];
+    [page5View addSubview:monkeyButton];
+    [monkeyButton release];
+    
+
+    ///monkey
+    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
+    UIImage *monkeyImage1 = [UIImage imageNamed:@"4.png"];
+    [monkeyButton setTag:4];
+    [monkeyButton setBackgroundImage:monkeyImage1 forState:UIControlStateNormal];
+    
+    [monkeyButton addTarget:self 
+                     action:@selector(animalButtonWasClicked:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
+    monkeyButton.backgroundColor = [UIColor clearColor];
+    [monkeyButton setCenter:CGPointMake(710, 300)];  
+    [monkeyButton removeFromSuperview];
+    [page6View addSubview:monkeyButton];
     [monkeyButton release];
     
     
     
+    
+    ///monkey
+    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
+    UIImage *monkeyImage2 = [UIImage imageNamed:@"tourist2.png"];
+    [monkeyButton setTag:4];
+    [monkeyButton setBackgroundImage:monkeyImage2 forState:UIControlStateNormal];
+    
+    [monkeyButton addTarget:self 
+                     action:@selector(animalButtonWasClicked:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
+    monkeyButton.backgroundColor = [UIColor clearColor];
+    [monkeyButton setCenter:CGPointMake(710, 300)];  
+    [monkeyButton removeFromSuperview];
+    [page6View addSubview:monkeyButton];
+    [monkeyButton release];
+
+
+    
+    const float buttonLen = 110;
+    const float buttonHigh = 62;
+    const float buttonSepratorX = 6;
+    const float buttonSepratorY = 10;
+    const int buttonsPerLine = 5;
+
+       NSArray * array  = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20", nil];
+//        int leagueNumber = [array count];
+        
+        int i=0;
+        int rowIndex;
+        int rankIndex;
+        
+        
+        for (NSString* levels in array){
+            
+            NSString *title = levels;
+            UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+            
+            [button setTitle:title forState:UIControlStateNormal];
+            [button setTag:i];
+            rowIndex = i/buttonsPerLine;
+            rankIndex = i%buttonsPerLine;
+            
+            
+            button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
+            
+            [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+            
+            if ([button tag] ==4) {
+                
+                
+                UIImage *image = [UIImage imageNamed:@"tiger.png"];
+                [button setTitle:@"fcuk" forState :UIControlStateNormal];
+                [button setFrame:CGRectMake(100,200,80,80)];
+                [button setImage:image forState :UIControlStateNormal];
+                
+            }
+
+            [page6View addSubview:button];
+            i++;
+        }
+        
+    
+    
+    
+    
+    
+    [_currentView removeFromSuperview];
+
     switch (pageNumbers) {
         case 1:
-            [self.view addSubview:page1View];
-            [page1View release];
+            _currentView =  page1View;
             break;
         case 2:
-            [self.view addSubview:page2View];
-            [page2View release];
+             _currentView = page2View;
             break;
         case 3:
-            [self.view addSubview:page3View];
-            [page3View release];
+            _currentView = page3View;
             break;
         case 4:
-            [self.view addSubview:page4View];
-            [page4View release];
+            _currentView = page4View;
             break;
         case 5:
-            [self.view addSubview:page5View];
-            [page5View release];
+            _currentView = page5View;
             break;
         case 6:
-            [self.view addSubview:page6View];
-            [page6View release];
+            _currentView = page6View;
             break;
         case 7:
-            [self.view addSubview:page7View];
-            [page7View release];
+            _currentView = page7View;
             break;
         default:
             break;
     }
-   
-    [page1View removeFromSuperview];
-    [page2View removeFromSuperview];
-    [page3View removeFromSuperview];
-    [page4View removeFromSuperview];
-    [page5View removeFromSuperview];
-    [page6View removeFromSuperview];
-    [page7View removeFromSuperview];  
+
+    [self.view insertSubview:_currentView atIndex :1];
     
-    
-//    [self.view addSubview:<#(UIView *)#>];
+    [page1View release];
+    [page2View release];
+    [page3View release];
+    [page4View release];
+    [page5View release];
+    [page6View release];
+    [page7View release];
+
     
     
 }
@@ -466,7 +564,7 @@
     }
     pageInteger =  pageInteger - count;
     [self showPage:pageInteger];
-   
+    [self addContentsButtons:pageInteger];
 
 }
 
@@ -485,6 +583,8 @@
     }
     pageInteger = count +pageInteger;
     [self showPage:pageInteger];
+    [self addContentsButtons:pageInteger];
+
 }
 
 

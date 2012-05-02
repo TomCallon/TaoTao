@@ -16,6 +16,7 @@
    
     
     AVAudioPlayer *_audioPlayer;
+    UIView *_currentView;
     
     BOOL  showEnglish;    
 }
@@ -25,6 +26,8 @@
 @property (nonatomic,retain) UILabel *textLabel;
 @property (nonatomic,retain) UILabel *pageNumberLabel;
 @property (nonatomic,retain) UIButton *autoPlayingButton;
+@property (nonatomic,retain) UIView *currentView;
+
 @property (nonatomic,assign) BOOL showEnglish;
 @property (nonatomic,retain) AVAudioPlayer *audioPlayer;
 
