@@ -13,7 +13,7 @@
     UILabel          *_textLabel;
     UILabel    *_pageNumberLabel;
     UIButton *_autoPlayingButton;
-   
+    UIImageView       *_imageView;
     
     AVAudioPlayer *_audioPlayer;
     
@@ -25,6 +25,7 @@
 @property (nonatomic,retain) UILabel *textLabel;
 @property (nonatomic,retain) UILabel *pageNumberLabel;
 @property (nonatomic,retain) UIButton *autoPlayingButton;
+@property (nonatomic,retain) UIImageView     *imageView;
 @property (nonatomic,assign) BOOL showEnglish;
 @property (nonatomic,retain) AVAudioPlayer *audioPlayer;
 

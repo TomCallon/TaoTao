@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import "SF.h"
-#import "FirstPageViewController.h"
-#import "JHCustomSegue.h"
+
 @interface ViewController ()
 
 @end
@@ -20,6 +19,7 @@
 @synthesize textLabel = _textLabel;
 @synthesize pageNumberLabel =_pageNumberLabel;
 @synthesize autoPlayingButton =_autoPlayingButton;
+@synthesize imageView =_imageView;
 
 
 @synthesize showEnglish;
@@ -32,173 +32,109 @@
     
     
     [super dealloc];
-    
-    [_backButton release];
-    [_textLabel release];
-    [_pageNumberLabel release];
-    [_autoPlayingButton release];
+//    [_backButton release];
+//    [_textLabel release];
+//    [_pageNumberLabel release];
+//    [_autoPlayingButton release];
+//    [_imageView release];
 
     
 }
 
 -(void)addContentsButtons :(NSInteger)pageNumbers{
     
-    CGRect frame = CGRectMake(0, 0, 1024, 680);
-    UIView *page1View = [[UIView alloc]initWithFrame:frame];
-    page1View.backgroundColor = [UIColor clearColor];
     
-    UIView *page2View = [[UIView alloc]initWithFrame:frame];
-    page2View.backgroundColor = [UIColor clearColor];
-    
-    UIView *page3View = [[UIView alloc]initWithFrame:frame];
-    page3View.backgroundColor = [UIColor clearColor];
-    
-    UIView *page4View = [[UIView alloc]initWithFrame:frame];
-    page4View.backgroundColor = [UIColor clearColor];
-    
-    UIView *page5View = [[UIView alloc]initWithFrame:frame];
-    page5View.backgroundColor = [UIColor clearColor];
-    
-    UIView *page6View = [[UIView alloc]initWithFrame:frame];
-    page6View.backgroundColor = [UIColor clearColor];
-    
-    UIView *page7View = [[UIView alloc]initWithFrame:frame];
-    page7View.backgroundColor = [UIColor clearColor];
-    
-    UIButton *taotaoButton;
-    UIButton *elephantButton;
-    UIButton *tigerButton;
-    UIButton *giraffeButton;
-    UIButton *monkeyButton;
-    ///TaoTao
-    taotaoButton = [[UIButton alloc]initWithFrame:CGRectMake(580, 560, 190, 250)];
-    
-    UIImage *taotaoImage = [UIImage imageNamed:@"taotao.png"];
-    [taotaoButton setTag:0];
-    [taotaoButton setBackgroundImage:taotaoImage forState:UIControlStateNormal];
-    
-    [taotaoButton addTarget:self action:@selector(animalButtonWasClicked:) forControlEvents:UIControlEventTouchUpInside];
-    
-    taotaoButton.backgroundColor = [UIColor clearColor];
-    [taotaoButton setCenter:CGPointMake(550, 520)]; 
-    [taotaoButton removeFromSuperview];
-    [page1View addSubview:taotaoButton];
-    [taotaoButton release];
-    
-    
-    ///elephant
-    elephantButton = [[UIButton alloc]initWithFrame:CGRectMake(480, 485, 200, 300)];
-    UIImage *elephantImage = [UIImage imageNamed:@"elephant.png"];
-    [elephantButton setTag:1];
-    [elephantButton setBackgroundImage:elephantImage forState:UIControlStateNormal];
-    
-    [elephantButton addTarget:self 
-                       action:@selector(animalButtonWasClicked:) 
-             forControlEvents:UIControlEventTouchUpInside];
-    
-    elephantButton.backgroundColor = [UIColor clearColor];
-    [elephantButton setCenter:CGPointMake(370, 200)];
-    [elephantButton removeFromSuperview];
-    [page1View addSubview:elephantButton];
-    [elephantButton release];
-    
-    
-    ///tiger
-    tigerButton = [[UIButton alloc]initWithFrame:CGRectMake(780, 185, 240, 200)];
-    UIImage *tigerImage = [UIImage imageNamed:@"tiger.png"];
-    [tigerButton setTag:2];
-    
-    [tigerButton setBackgroundImage:tigerImage forState:UIControlStateNormal];
-    [tigerButton addTarget:self 
-                    action:@selector(animalButtonWasClicked:) 
-          forControlEvents:UIControlEventTouchUpInside];
-    
-    tigerButton.backgroundColor = [UIColor clearColor];
-    [tigerButton setCenter:CGPointMake(700, 100)];
-    [tigerButton removeFromSuperview];
-    [page1View addSubview:tigerButton];
-    [tigerButton release];
-    
-    ///giraffe
-    giraffeButton = [[UIButton alloc]initWithFrame:CGRectMake(680, 475, 150, 350)];
-    UIImage *giraffeImage = [UIImage imageNamed:@"giraffe.png"];
-    [giraffeButton setTag:3];
-    [giraffeButton setBackgroundImage:giraffeImage forState:UIControlStateNormal];
-    
-    [giraffeButton addTarget:self 
-                      action:@selector(animalButtonWasClicked:) 
-            forControlEvents:UIControlEventTouchUpInside];
-    
-    giraffeButton.backgroundColor = [UIColor clearColor];
-    [giraffeButton setCenter:CGPointMake(700, 350)]; 
-    [giraffeButton removeFromSuperview];
-    [page1View addSubview:giraffeButton];
-    [giraffeButton release];
-    
-    
-    ///monkey
-    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-    UIImage *monkeyImage = [UIImage imageNamed:@"monkey.png"];
-    [monkeyButton setTag:4];
-    [monkeyButton setBackgroundImage:monkeyImage forState:UIControlStateNormal];
-    
-    [monkeyButton addTarget:self 
-                     action:@selector(animalButtonWasClicked:)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    monkeyButton.backgroundColor = [UIColor clearColor];
-    [monkeyButton setCenter:CGPointMake(710, 300)];  
-    [monkeyButton removeFromSuperview];
-    [page1View addSubview:monkeyButton];
-    [monkeyButton release];
-    
-    
-    
-    switch (pageNumbers) {
-        case 1:
-            [self.view addSubview:page1View];
-            [page1View release];
-            break;
-        case 2:
-            [self.view addSubview:page2View];
-            [page2View release];
-            break;
-        case 3:
-            [self.view addSubview:page3View];
-            [page3View release];
-            break;
-        case 4:
-            [self.view addSubview:page4View];
-            [page4View release];
-            break;
-        case 5:
-            [self.view addSubview:page5View];
-            [page5View release];
-            break;
-        case 6:
-            [self.view addSubview:page6View];
-            [page6View release];
-            break;
-        case 7:
-            [self.view addSubview:page7View];
-            [page7View release];
-            break;
-        default:
-            break;
+    if (pageNumbers ==1) {
+        UIButton *taotaoButton;
+        UIButton *elephantButton;
+        UIButton *tigerButton;
+        UIButton *giraffeButton;
+        UIButton *monkeyButton;
+        ///TaoTao
+        taotaoButton = [[UIButton alloc]initWithFrame:CGRectMake(580, 560, 190, 250)];
+        
+        UIImage *taotaoImage = [UIImage imageNamed:@"taotao.png"];
+        [taotaoButton setTag:0];
+        [taotaoButton setBackgroundImage:taotaoImage forState:UIControlStateNormal];
+        
+        [taotaoButton addTarget:self action:@selector(animalButtonWasClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        taotaoButton.backgroundColor = [UIColor clearColor];
+        [taotaoButton setCenter:CGPointMake(550, 520)]; 
+        [taotaoButton removeFromSuperview];
+        [self.view addSubview:taotaoButton];
+        [taotaoButton release];
+        
+        
+        ///elephant
+        elephantButton = [[UIButton alloc]initWithFrame:CGRectMake(480, 485, 200, 300)];
+        UIImage *elephantImage = [UIImage imageNamed:@"elephant.png"];
+        [elephantButton setTag:1];
+        [elephantButton setBackgroundImage:elephantImage forState:UIControlStateNormal];
+        
+        [elephantButton addTarget:self 
+                           action:@selector(animalButtonWasClicked:) 
+                 forControlEvents:UIControlEventTouchUpInside];
+        
+        elephantButton.backgroundColor = [UIColor clearColor];
+        [elephantButton setCenter:CGPointMake(370, 200)];
+        [elephantButton removeFromSuperview];
+        [self.view addSubview:elephantButton];
+        [elephantButton release];
+        
+        
+        ///tiger
+        tigerButton = [[UIButton alloc]initWithFrame:CGRectMake(780, 185, 240, 200)];
+        UIImage *tigerImage = [UIImage imageNamed:@"tiger.png"];
+        [tigerButton setTag:2];
+        
+        [tigerButton setBackgroundImage:tigerImage forState:UIControlStateNormal];
+        [tigerButton addTarget:self 
+                        action:@selector(animalButtonWasClicked:) 
+              forControlEvents:UIControlEventTouchUpInside];
+        
+        tigerButton.backgroundColor = [UIColor clearColor];
+        [tigerButton setCenter:CGPointMake(700, 100)];
+        [tigerButton removeFromSuperview];
+        [self.view addSubview:tigerButton];
+        [tigerButton release];
+        
+        ///giraffe
+        giraffeButton = [[UIButton alloc]initWithFrame:CGRectMake(680, 475, 150, 350)];
+        UIImage *giraffeImage = [UIImage imageNamed:@"giraffe.png"];
+        [giraffeButton setTag:3];
+        [giraffeButton setBackgroundImage:giraffeImage forState:UIControlStateNormal];
+        
+        [giraffeButton addTarget:self 
+                          action:@selector(animalButtonWasClicked:) 
+                forControlEvents:UIControlEventTouchUpInside];
+        
+        giraffeButton.backgroundColor = [UIColor clearColor];
+        [giraffeButton setCenter:CGPointMake(700, 350)]; 
+        [giraffeButton removeFromSuperview];
+        [self.view addSubview:giraffeButton];
+        [giraffeButton release];
+        
+        
+        ///monkey
+        monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
+        UIImage *monkeyImage = [UIImage imageNamed:@"monkey.png"];
+        [monkeyButton setTag:4];
+        [monkeyButton setBackgroundImage:monkeyImage forState:UIControlStateNormal];
+        
+        [monkeyButton addTarget:self 
+                         action:@selector(animalButtonWasClicked:)
+               forControlEvents:UIControlEventTouchUpInside];
+        
+        monkeyButton.backgroundColor = [UIColor clearColor];
+        [monkeyButton setCenter:CGPointMake(710, 300)];  
+        [monkeyButton removeFromSuperview];
+        [self.view addSubview:monkeyButton];
+        [monkeyButton release];
+        
+    }else {
+        
     }
-   
-    [page1View removeFromSuperview];
-    [page2View removeFromSuperview];
-    [page3View removeFromSuperview];
-    [page4View removeFromSuperview];
-    [page5View removeFromSuperview];
-    [page6View removeFromSuperview];
-    [page7View removeFromSuperview];  
-    
-    
-//    [self.view addSubview:<#(UIView *)#>];
-    
-    
 }
 
 
@@ -320,7 +256,6 @@
             [_textLabel setTextColor:[UIColor brownColor]];
             [_autoPlayingButton setFrame:playButtonframe];
             [self addContentsButtons:pageInteger];
-            [self performSegueWithIdentifier:@"PageSegue1" sender:self];
             break;
         case 2:
             frame = CGRectMake(220, 40, 380, 150);
@@ -378,31 +313,20 @@
     
     
     
-//    [_imageView removeFromSuperview];
-//    pageInteger = pageNumber;
-//    NSString *pageName  = [NSString stringWithFormat:@"%d.png",pageInteger];
-//    UIImage *image = [UIImage imageNamed:pageName];
-//    UIImageView *imageView;
-//    imageView = [[UIImageView alloc]initWithImage:image];
-//     self.imageView = imageView;
-//    [_imageView  setFrame:CGRectMake(0, 0, 1024, 680)];
-//    [self.view insertSubview:_imageView atIndex:0];
-//    [imageView release];
-    
-    JHCustomSegue * myCustomSegue = [[JHCustomSegue alloc]init];
-    [myCustomSegue perform]; 
+    [_imageView removeFromSuperview];
+    pageInteger = pageNumber;
+    NSString *pageName  = [NSString stringWithFormat:@"%d.png",pageInteger];
+    UIImage *image = [UIImage imageNamed:pageName];
+    UIImageView *imageView;
+    imageView = [[UIImageView alloc]initWithImage:image];
+     _imageView = imageView;
+    [_imageView  setFrame:CGRectMake(0, 0, 1024, 680)];
+    [self.view insertSubview:_imageView atIndex:0];
+    [imageView release];
     
 
     
 }
-
-//-(void)addThePageController{
-//    
-//    FirstPageViewController *firstPageViewController = [[FirstPageViewController alloc]init];
-//    [self.view insertSubview:firstPageViewController.view atIndex:0];
-//    [firstPageViewController release];
-//
-//}
 
 
 -(void)animalButtonWasClicked :(UIButton *)sender{
@@ -558,7 +482,7 @@
     NSString *appendingString;
     switch (pageInteger) {
         case 1:
-            appendingString = @"1";
+        appendingString = @"1";
             break;
         case 2:
             appendingString =@"2";
@@ -610,7 +534,7 @@
     
     [self.audioPlayer prepareToPlay];
     [self.audioPlayer setVolume:9];
-    self.audioPlayer.numberOfLoops = 0; //设置音乐播放次数  -1为一直循环
+    self.audioPlayer.numberOfLoops = 1; //设置音乐播放次数  -1为一直循环
     //    if(mainMusicStatus)
     //    {
     //        [myBackMusic play]; //播放
@@ -629,6 +553,7 @@
     [self setPageNumberLabel:nil];
     [self setTextLabel:nil];
     [self setAutoPlayingButton:nil];
+    [self setImageView:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

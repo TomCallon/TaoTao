@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstPageViewController : UIViewController
+@interface FirstPageViewController : UIViewController{
+
+    
+     UIImageView       *_imageView;
+     
+}
+
+@property (nonatomic,retain) UIImageView     *imageView;
 
 @end
