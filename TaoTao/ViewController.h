@@ -1,9 +1,7 @@
-//
-//  ViewController.h
-//  TaoTao
-//
-//  Created by Tom Callon (Hotmail) on 4/17/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+
+
+
+
 //
 
 #import <UIKit/UIKit.h>
@@ -32,14 +30,8 @@
 @property (nonatomic,assign) BOOL showEnglish;
 @property (nonatomic,retain) AVAudioPlayer *audioPlayer;
 
-
 - (IBAction)pageBackButton:(id)sender;
-
 - (IBAction)pageForwardButton:(id)sender;
-
 - (IBAction)backButton:(id)sender;
-
 - (IBAction)translationButton:(id)sender;
-
-
 @end
