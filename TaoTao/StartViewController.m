@@ -417,7 +417,8 @@
         return (UIInterfaceOrientationLandscapeLeft == interfaceOrientation ||
                 UIInterfaceOrientationLandscapeRight == interfaceOrientation);
     } else {
-        return YES;
+        return (UIInterfaceOrientationLandscapeLeft == interfaceOrientation ||
+                UIInterfaceOrientationLandscapeRight == interfaceOrientation);
     }
 }
 

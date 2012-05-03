@@ -74,7 +74,14 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        
+        return (UIInterfaceOrientationLandscapeLeft == interfaceOrientation ||
+                UIInterfaceOrientationLandscapeRight == interfaceOrientation);
+    } else {
+        return (UIInterfaceOrientationLandscapeLeft == interfaceOrientation ||
+                UIInterfaceOrientationLandscapeRight == interfaceOrientation);
+    }
 }
 
 @end

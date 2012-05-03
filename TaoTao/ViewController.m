@@ -130,11 +130,11 @@
             
         }
         [self addGestureRecognizersToPiece:button];
-        [page1View addSubview :button];
+//        [page1View addSubview :button];
         i++;
     }
 
-    NSArray * array2  = [[NSArray alloc]initWithObjects:@"28",@"29",@"30",@"31",@"32",@"33",@"34",@"35",@"36", nil];
+    NSArray * array2  = [[NSArray alloc]initWithObjects:@"28",@"29",@"30",@"31",@"33",@"34",@"35",@"36",@"32", nil];
     
      i=0;
      
@@ -268,6 +268,8 @@
     [taotaoButton setCenter:CGPointMake(550, 520)]; 
     [taotaoButton removeFromSuperview];
     [page7View addSubview :taotaoButton];
+    [page1View addSubview :taotaoButton];
+
 
     ///elephant
     elephantButton = [[UIButton alloc]initWithFrame:CGRectMake(480, 485, 200, 300)];
@@ -283,6 +285,7 @@
     [elephantButton setCenter:CGPointMake(370, 200)];
     [elephantButton removeFromSuperview];
     [page7View addSubview:elephantButton];
+    [page1View addSubview :elephantButton];
     [elephantButton release];
     
     
@@ -300,6 +303,7 @@
     [tigerButton setCenter:CGPointMake(700, 100)];
     [tigerButton removeFromSuperview];
     [page7View addSubview:tigerButton];
+    [page1View addSubview :tigerButton];
     [tigerButton release];
     
     ///giraffe
@@ -316,6 +320,7 @@
     [giraffeButton setCenter:CGPointMake(700, 350)]; 
     [giraffeButton removeFromSuperview];
     [page7View addSubview:giraffeButton];
+    [page1View addSubview :giraffeButton];
     [giraffeButton release];
     
     
@@ -333,43 +338,46 @@
     [monkeyButton setCenter:CGPointMake(710, 300)];  
     [monkeyButton removeFromSuperview];
     [page5View addSubview:monkeyButton];
+    [page1View addSubview :monkeyButton];
     [monkeyButton release];
     
 
-    ///monkey
-    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-    UIImage *monkeyImage1 = [UIImage imageNamed:@"4.png"];
-    [monkeyButton setTag:4];
-    [monkeyButton setBackgroundImage:monkeyImage1 forState:UIControlStateNormal];
+//    ///monkey
+//    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
+//    UIImage *monkeyImage1 = [UIImage imageNamed:@"4.png"];
+//    [monkeyButton setTag:4];
+//    [monkeyButton setBackgroundImage:monkeyImage1 forState:UIControlStateNormal];
+//    
+//    [monkeyButton addTarget:self 
+//                     action:@selector(animalButtonWasClicked:)
+//           forControlEvents:UIControlEventTouchUpInside];
+//    
+//    monkeyButton.backgroundColor = [UIColor clearColor];
+//    [monkeyButton setCenter:CGPointMake(710, 300)];  
+//    [monkeyButton removeFromSuperview];
+//    [page7View addSubview:monkeyButton];
+//    [page1View addSubview :monkeyButton];
+//    [monkeyButton release];
     
-    [monkeyButton addTarget:self 
-                     action:@selector(animalButtonWasClicked:)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    monkeyButton.backgroundColor = [UIColor clearColor];
-    [monkeyButton setCenter:CGPointMake(710, 300)];  
-    [monkeyButton removeFromSuperview];
-    [page7View addSubview:monkeyButton];
-    [monkeyButton release];
     
     
     
-    
-    ///monkey
-    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-    UIImage *monkeyImage2 = [UIImage imageNamed:@"44.png"];
-    [monkeyButton setTag:4];
-    [monkeyButton setBackgroundImage:monkeyImage2 forState:UIControlStateNormal];
-    
-    [monkeyButton addTarget:self 
-                     action:@selector(animalButtonWasClicked:)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    monkeyButton.backgroundColor = [UIColor clearColor];
-    [monkeyButton setCenter:CGPointMake(710, 300)];  
-    [monkeyButton removeFromSuperview];
-    [page7View addSubview:monkeyButton];
-    [monkeyButton release];
+//    ///monkey
+//    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
+//    UIImage *monkeyImage2 = [UIImage imageNamed:@"44.png"];
+//    [monkeyButton setTag:4];
+//    [monkeyButton setBackgroundImage:monkeyImage2 forState:UIControlStateNormal];
+//    
+//    [monkeyButton addTarget:self 
+//                     action:@selector(animalButtonWasClicked:)
+//           forControlEvents:UIControlEventTouchUpInside];
+//    
+//    monkeyButton.backgroundColor = [UIColor clearColor];
+//    [monkeyButton setCenter:CGPointMake(710, 300)];  
+//    [monkeyButton removeFromSuperview];
+//    [page7View addSubview:monkeyButton];
+////    [page1View addSubview :monkeyButton];
+//    [monkeyButton release];
 
 
     [self addGestureRecognizersToPiece:taotaoButton];
@@ -450,6 +458,7 @@
     
     [self.view addSubview:_currentView];
     
+    
     [page1View release];
     [page2View release];
     [page3View release];
@@ -474,6 +483,10 @@
 
 }
 
+#pragma mark -
+#pragma mark === view life  ===
+#pragma mark
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -485,10 +498,16 @@
     [self showPage:1];
 
     
-    [self.view addSubview: [self backButton]];
-    [self.view bringSubviewToFront :[self backButton]];
+    
     [self.view addSubview:[self textLabel]];
     [self.view addSubview: [self pageNumberLabel]];
+    
+    
+    [self.view addSubview: [self backButton]];
+//    [self.view bringSubviewToFront :[self backButton]];
+    
+    
+    
     [self.view addSubview:[self autoPlayingButton]];
     [self.view bringSubviewToFront:[self autoPlayingButton]];
 
@@ -514,6 +533,8 @@
     [backButt release];
     return _backButton;
 }
+
+
 -(UILabel *)pageNumberLabel{
   
     UILabel *label;
@@ -523,6 +544,8 @@
         [label setTextAlignment:UITextAlignmentCenter];
         [label setText:@"1"];
         [label setTextColor:[UIColor redColor]];
+        label.font = [UIFont systemFontOfSize:30];
+        label.backgroundColor = [UIColor clearColor];
     }
     self.pageNumberLabel = label;
     [label release];
@@ -744,7 +767,7 @@
     [self showPage:pageInteger];
     [self addContentsButtons:pageInteger];
     [self.view bringSubviewToFront:[self autoPlayingButton]];
-    [self.view bringSubviewToFront :[self backButton]];
+//    [self.view bringSubviewToFront :[self backButton]];
 }
 
 
@@ -763,8 +786,9 @@
     pageInteger = count +pageInteger;
     [self showPage:pageInteger];
     [self addContentsButtons:pageInteger];
+    
     [self.view bringSubviewToFront:[self autoPlayingButton]];
-    [self.view bringSubviewToFront :[self backButton]];
+//    [self.view bringSubviewToFront :[self backButton]];
 }
 
 
@@ -1144,9 +1168,12 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        
+        return (UIInterfaceOrientationLandscapeLeft == interfaceOrientation ||
+                UIInterfaceOrientationLandscapeRight == interfaceOrientation);
     } else {
-        return YES;
+        return (UIInterfaceOrientationLandscapeLeft == interfaceOrientation ||
+                UIInterfaceOrientationLandscapeRight == interfaceOrientation);
     }
 }
 
