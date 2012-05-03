@@ -5,7 +5,9 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController<AVAudioPlayerDelegate>
+@class FirstPageViewController;
+
+@interface ViewController : UIViewController<AVAudioPlayerDelegate,UIGestureRecognizerDelegate>
 
 {
     NSInteger        pageInteger;
@@ -14,9 +16,14 @@
     UILabel    *_pageNumberLabel;
     UIButton *_autoPlayingButton;
    
+    FirstPageViewController *_firstPageViewController;
     
+    UIImageView  *_imageView;
     AVAudioPlayer *_audioPlayer;
     UIView *_currentView;
+    
+    UIView *pieceForReset;
+
     
     BOOL  showEnglish;    
 }
@@ -27,6 +34,11 @@
 @property (nonatomic,retain) UILabel *pageNumberLabel;
 @property (nonatomic,retain) UIButton *autoPlayingButton;
 @property (nonatomic,retain) UIView *currentView;
+@property (nonatomic,retain) UIImageView  *imageView;
+
+
+@property (nonatomic,retain)FirstPageViewController *firstPageViewController;
+
 
 @property (nonatomic,assign) BOOL showEnglish;
 @property (nonatomic,retain) AVAudioPlayer *audioPlayer;

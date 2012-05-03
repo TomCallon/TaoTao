@@ -10,6 +10,11 @@
 #import "SF.h"
 #import "FirstPageViewController.h"
 #import "JHCustomSegue.h"
+
+
+
+#define GROW_ANIMATION_DURATION_SECONDS 0.15    // Determines how fast a piece size grows when it is moved.
+
 @interface ViewController ()
 
 @end
@@ -21,6 +26,9 @@
 @synthesize pageNumberLabel =_pageNumberLabel;
 @synthesize autoPlayingButton =_autoPlayingButton;
 @synthesize currentView = _currentView;
+@synthesize imageView = _imageView;
+
+@synthesize firstPageViewController =_firstPageViewController;
 
 @synthesize showEnglish;
 
@@ -43,6 +51,11 @@
 
 -(void)addContentsButtons :(NSInteger)pageNumbers{
     
+    const float buttonLen = 110;
+    const float buttonHigh = 62;
+    const float buttonSepratorX = 6;
+    const float buttonSepratorY = 10;
+    const int buttonsPerLine = 5;
     
     CGRect  iPadFrame   = CGRectMake(0, 0, 1024, 680);
     CGRect  iPhoneFrame = CGRectMake(0, 0, 480, 280);
@@ -83,6 +96,163 @@
     UIButton *tigerButton;
     UIButton *giraffeButton;
     UIButton *monkeyButton;
+
+    
+    
+    
+       
+    NSArray * array1  = [[NSArray alloc]initWithObjects:@"37",@"38",@"39",@"40",@"41",@"42",@"43",@"44",@"45",@"46", nil];
+    
+    int i=0;
+    int rowIndex;
+    int rankIndex;
+
+    for (NSString* levels in array1){
+        
+        NSString *title = levels;
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setTitle:title forState:UIControlStateNormal];
+        [button setTag:i];
+        rowIndex = i/buttonsPerLine;
+        rankIndex = i%buttonsPerLine;
+        button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
+        
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array1 objectAtIndex:i]];
+        UIImage *image = [UIImage imageNamed:imageNumber];
+        [button setImage:image forState :UIControlStateNormal];
+        
+        
+        if ([button tag] ==4) {
+            [button setTitle:@"fcuk" forState :UIControlStateNormal];
+            [button setFrame:CGRectMake(100,200,80,80)];
+            [button setImage:image forState :UIControlStateNormal];
+            
+        }
+        [self addGestureRecognizersToPiece:button];
+        [page1View addSubview :button];
+        i++;
+    }
+
+    NSArray * array2  = [[NSArray alloc]initWithObjects:@"28",@"29",@"30",@"31",@"32",@"33",@"34",@"35",@"36", nil];
+    
+     i=0;
+     
+         
+    
+    for (NSString* levels in array2){
+        
+        NSString *title = levels;
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setTitle:title forState:UIControlStateNormal];
+        [button setTag:i];
+        rowIndex = i/buttonsPerLine;
+        rankIndex = i%buttonsPerLine;
+        button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
+        
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array2 objectAtIndex:i]];
+        UIImage *image = [UIImage imageNamed:imageNumber];
+        [button setImage:image forState :UIControlStateNormal];
+        [self addGestureRecognizersToPiece:button];
+        [page2View addSubview :button];
+        i++;
+    }
+    
+    
+    NSArray * array3  = [[NSArray alloc]initWithObjects:@"19",@"20",@"21",@"22",@"23",@"24",@"25",@"26",@"27", nil];
+    
+    i=0;
+
+    for (NSString* levels in array3){
+        
+        NSString *title = levels;
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setTitle:title forState:UIControlStateNormal];
+        [button setTag:i];
+        rowIndex = i/buttonsPerLine;
+        rankIndex = i%buttonsPerLine;
+        button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
+        
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array3 objectAtIndex:i]];
+        UIImage *image = [UIImage imageNamed:imageNumber];
+        [button setImage:image forState :UIControlStateNormal];
+        [self addGestureRecognizersToPiece:button];
+        [page3View addSubview :button];
+        i++;
+    }
+    
+    NSArray * array4 = [[NSArray alloc]initWithObjects:@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18", nil];
+    
+    i=0;
+    
+    for (NSString* levels in array4){
+        
+        NSString *title = levels;
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setTitle:title forState:UIControlStateNormal];
+        [button setTag:i];
+        rowIndex = i/buttonsPerLine;
+        rankIndex = i%buttonsPerLine;
+        button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
+        
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array4 objectAtIndex:i]];
+        UIImage *image = [UIImage imageNamed:imageNumber];
+        [button setImage:image forState :UIControlStateNormal];
+        [self addGestureRecognizersToPiece:button];
+        [page4View addSubview :button];
+        i++;
+    }
+    
+    
+    NSArray * array5 = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
+    
+    i=0;
+    
+    for (NSString* levels in array5){
+        
+        NSString *title = levels;
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setTitle:title forState:UIControlStateNormal];
+        [button setTag:i];
+        rowIndex = i/buttonsPerLine;
+        rankIndex = i%buttonsPerLine;
+        button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
+        
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array5 objectAtIndex:i]];
+        UIImage *image = [UIImage imageNamed:imageNumber];
+        [button setImage:image forState :UIControlStateNormal];
+        [self addGestureRecognizersToPiece:button];
+        [page5View addSubview :button];
+        i++;
+    }
+    
+    
+    NSArray * array6 = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4", nil];
+    
+    i=0;
+    
+    for (NSString* levels in array6){
+        
+        NSString *title = levels;
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setTitle:title forState:UIControlStateNormal];
+        [button setTag:i];
+        rowIndex = i/buttonsPerLine;
+        rankIndex = i%buttonsPerLine;
+        button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
+        
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array6 objectAtIndex:i]];
+        UIImage *image = [UIImage imageNamed:imageNumber];
+        [button setImage:image forState :UIControlStateNormal];
+        [self addGestureRecognizersToPiece:button];
+        [page6View addSubview :button];
+        i++;
+    }
     
     
     ///TaoTao
@@ -97,17 +267,11 @@
     taotaoButton.backgroundColor = [UIColor clearColor];
     [taotaoButton setCenter:CGPointMake(550, 520)]; 
     [taotaoButton removeFromSuperview];
-    
-    
-    
-    
-    [page1View addSubview:taotaoButton];
-    [taotaoButton release];
-    
-    
+    [page7View addSubview :taotaoButton];
+
     ///elephant
     elephantButton = [[UIButton alloc]initWithFrame:CGRectMake(480, 485, 200, 300)];
-    UIImage *elephantImage = [UIImage imageNamed:@"elephant.png"];
+    UIImage *elephantImage = [UIImage imageNamed:@"45.png"];
     [elephantButton setTag:1];
     [elephantButton setBackgroundImage:elephantImage forState:UIControlStateNormal];
     
@@ -118,13 +282,13 @@
     elephantButton.backgroundColor = [UIColor clearColor];
     [elephantButton setCenter:CGPointMake(370, 200)];
     [elephantButton removeFromSuperview];
-    [page2View addSubview:elephantButton];
+    [page7View addSubview:elephantButton];
     [elephantButton release];
     
     
     ///tiger
     tigerButton = [[UIButton alloc]initWithFrame:CGRectMake(780, 185, 240, 200)];
-    UIImage *tigerImage = [UIImage imageNamed:@"tiger.png"];
+    UIImage *tigerImage = [UIImage imageNamed:@"44.png"];
     [tigerButton setTag:2];
     
     [tigerButton setBackgroundImage:tigerImage forState:UIControlStateNormal];
@@ -135,7 +299,7 @@
     tigerButton.backgroundColor = [UIColor clearColor];
     [tigerButton setCenter:CGPointMake(700, 100)];
     [tigerButton removeFromSuperview];
-    [page3View addSubview:tigerButton];
+    [page7View addSubview:tigerButton];
     [tigerButton release];
     
     ///giraffe
@@ -151,13 +315,13 @@
     giraffeButton.backgroundColor = [UIColor clearColor];
     [giraffeButton setCenter:CGPointMake(700, 350)]; 
     [giraffeButton removeFromSuperview];
-    [page4View addSubview:giraffeButton];
+    [page7View addSubview:giraffeButton];
     [giraffeButton release];
     
     
     ///monkey
     monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-    UIImage *monkeyImage = [UIImage imageNamed:@"monkey.png"];
+    UIImage *monkeyImage = [UIImage imageNamed:@"43.png"];
     [monkeyButton setTag:4];
     [monkeyButton setBackgroundImage:monkeyImage forState:UIControlStateNormal];
     
@@ -185,7 +349,7 @@
     monkeyButton.backgroundColor = [UIColor clearColor];
     [monkeyButton setCenter:CGPointMake(710, 300)];  
     [monkeyButton removeFromSuperview];
-    [page6View addSubview:monkeyButton];
+    [page7View addSubview:monkeyButton];
     [monkeyButton release];
     
     
@@ -193,7 +357,7 @@
     
     ///monkey
     monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-    UIImage *monkeyImage2 = [UIImage imageNamed:@"tourist2.png"];
+    UIImage *monkeyImage2 = [UIImage imageNamed:@"44.png"];
     [monkeyButton setTag:4];
     [monkeyButton setBackgroundImage:monkeyImage2 forState:UIControlStateNormal];
     
@@ -204,30 +368,30 @@
     monkeyButton.backgroundColor = [UIColor clearColor];
     [monkeyButton setCenter:CGPointMake(710, 300)];  
     [monkeyButton removeFromSuperview];
-    [page6View addSubview:monkeyButton];
+    [page7View addSubview:monkeyButton];
     [monkeyButton release];
 
 
-    
-    const float buttonLen = 110;
-    const float buttonHigh = 62;
-    const float buttonSepratorX = 6;
-    const float buttonSepratorY = 10;
-    const int buttonsPerLine = 5;
+    [self addGestureRecognizersToPiece:taotaoButton];
+    [self addGestureRecognizersToPiece:elephantButton];
+    [self addGestureRecognizersToPiece:tigerButton];
+    [self addGestureRecognizersToPiece:giraffeButton];
+    [self addGestureRecognizersToPiece:monkeyButton];
 
-       NSArray * array  = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20", nil];
+    
+
+       NSArray * array  = [[NSArray alloc]initWithObjects:@"1",nil];
 //        int leagueNumber = [array count];
         
-        int i=0;
-        int rowIndex;
-        int rankIndex;
+        i=1;
+//        int rowIndex;
+//        int rankIndex;
         
         
         for (NSString* levels in array){
             
             NSString *title = levels;
             UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-            
             [button setTitle:title forState:UIControlStateNormal];
             [button setTag:i];
             rowIndex = i/buttonsPerLine;
@@ -238,24 +402,23 @@
             
             [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
             
-            if ([button tag] ==4) {
+            NSString *imageNumber = [NSString stringWithFormat:@"%d",i];
+            UIImage *image = [UIImage imageNamed:imageNumber];
+            [button setImage:image forState :UIControlStateNormal];
+
+            
+            if ([button tag] ==1) {
                 
-                
-                UIImage *image = [UIImage imageNamed:@"tiger.png"];
-                [button setTitle:@"fcuk" forState :UIControlStateNormal];
-                [button setFrame:CGRectMake(100,200,80,80)];
+                [button setFrame:CGRectMake(-10,-10,1030,480)];
+                [button setCenter:CGPointMake(500,236)];
                 [button setImage:image forState :UIControlStateNormal];
                 
             }
+            [self addGestureRecognizersToPiece:button];
 
-            [page6View addSubview:button];
+            [page7View addSubview :button];
             i++;
         }
-        
-    
-    
-    
-    
     
     [_currentView removeFromSuperview];
 
@@ -284,8 +447,8 @@
         default:
             break;
     }
-
-    [self.view insertSubview:_currentView atIndex :1];
+    
+    [self.view addSubview:_currentView];
     
     [page1View release];
     [page2View release];
@@ -300,6 +463,17 @@
 }
 
 
+-(void)buttonClicked:(UIButton *)sender{
+
+    UIButton *button = (UIButton *)sender;
+    
+    
+    NSLog(@"The button was clicked by %@",button);
+
+
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -312,9 +486,14 @@
 
     
     [self.view addSubview: [self backButton]];
+    [self.view bringSubviewToFront :[self backButton]];
     [self.view addSubview:[self textLabel]];
     [self.view addSubview: [self pageNumberLabel]];
     [self.view addSubview:[self autoPlayingButton]];
+    [self.view bringSubviewToFront:[self autoPlayingButton]];
+
+    
+   
 
 
 }
@@ -418,7 +597,7 @@
             [_textLabel setTextColor:[UIColor brownColor]];
             [_autoPlayingButton setFrame:playButtonframe];
             [self addContentsButtons:pageInteger];
-            [self performSegueWithIdentifier:@"PageSegue1" sender:self];
+//            [self performSegueWithIdentifier:@"PageSegue1" sender:self];
             break;
         case 2:
             frame = CGRectMake(220, 40, 380, 150);
@@ -476,21 +655,20 @@
     
     
     
-//    [_imageView removeFromSuperview];
-//    pageInteger = pageNumber;
-//    NSString *pageName  = [NSString stringWithFormat:@"%d.png",pageInteger];
-//    UIImage *image = [UIImage imageNamed:pageName];
-//    UIImageView *imageView;
-//    imageView = [[UIImageView alloc]initWithImage:image];
-//     self.imageView = imageView;
-//    [_imageView  setFrame:CGRectMake(0, 0, 1024, 680)];
-//    [self.view insertSubview:_imageView atIndex:0];
-//    [imageView release];
+    [_imageView removeFromSuperview];
+    pageInteger = pageNumber;
+    NSString *pageName  = [NSString stringWithFormat:@"%da.png",pageInteger];
+    UIImage *image = [UIImage imageNamed:pageName];
+    UIImageView *imageView;
+    imageView = [[UIImageView alloc]initWithImage:image];
+     self.imageView = imageView;
+    [_imageView  setFrame:CGRectMake(0, 0, 1024, 680)];
+    [self.view insertSubview:_imageView atIndex:0];
+    [imageView release];
     
-    JHCustomSegue * myCustomSegue = [[JHCustomSegue alloc]init];
-    [myCustomSegue perform]; 
-    
-
+//    JHCustomSegue * myCustomSegue = [[JHCustomSegue alloc]init];
+//    [myCustomSegue perform]; 
+//    [myCustomSegue release];
     
 }
 
@@ -565,7 +743,8 @@
     pageInteger =  pageInteger - count;
     [self showPage:pageInteger];
     [self addContentsButtons:pageInteger];
-
+    [self.view bringSubviewToFront:[self autoPlayingButton]];
+    [self.view bringSubviewToFront :[self backButton]];
 }
 
 
@@ -584,7 +763,8 @@
     pageInteger = count +pageInteger;
     [self showPage:pageInteger];
     [self addContentsButtons:pageInteger];
-
+    [self.view bringSubviewToFront:[self autoPlayingButton]];
+    [self.view bringSubviewToFront :[self backButton]];
 }
 
 
@@ -730,6 +910,236 @@
     [self setTextLabel:nil];
     [self setAutoPlayingButton:nil];
 }
+
+
+
+// adds a set of gesture recognizers to one of our piece subviews
+- (void)addGestureRecognizersToPiece:(UIView *)piece
+{
+    UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotatePiece:)];
+    [piece addGestureRecognizer:rotationGesture];
+    [rotationGesture release];
+    
+    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scalePiece:)];
+    [pinchGesture setDelegate:self];
+    [piece addGestureRecognizer:pinchGesture];
+    [pinchGesture release];
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panPiece:)];
+    [panGesture setMaximumNumberOfTouches:2];
+    [panGesture setDelegate:self];
+    [piece addGestureRecognizer:panGesture];
+    [panGesture release];
+    
+    
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(showResetMenu:)];
+    [piece addGestureRecognizer:longPressGesture];
+    [longPressGesture release];
+    
+    
+}
+
+#pragma mark -
+#pragma mark === Utility methods  ===
+#pragma mark
+
+// scale and rotation transforms are applied relative to the layer's anchor point
+// this method moves a gesture recognizer's view's anchor point between the user's fingers
+- (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        UIView *piece = gestureRecognizer.view;
+        CGPoint locationInView = [gestureRecognizer locationInView:piece];
+        CGPoint locationInSuperview = [gestureRecognizer locationInView:piece.superview];
+        
+        piece.layer.anchorPoint = CGPointMake(locationInView.x / piece.bounds.size.width, locationInView.y / piece.bounds.size.height);
+        piece.center = locationInSuperview;
+    }
+}
+// display a menu with a single item to allow the piece's transform to be reset
+- (void)showResetMenu:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+        UIMenuController *menuController = [UIMenuController sharedMenuController];
+        UIMenuItem *resetMenuItem = [[UIMenuItem alloc] initWithTitle:@"Reset" action:@selector(resetPiece:)];
+        CGPoint location = [gestureRecognizer locationInView:[gestureRecognizer view]];
+        
+        [self.view becomeFirstResponder];
+        [menuController setMenuItems:[NSArray arrayWithObject:resetMenuItem]];
+        [menuController setTargetRect:CGRectMake(location.x, location.y, 0, 0) inView:[gestureRecognizer view]];
+        [menuController setMenuVisible:YES animated:YES];
+        
+        pieceForReset = [gestureRecognizer view];
+        [resetMenuItem release];
+    }
+}
+
+// animate back to the default anchor point and transform
+- (void)resetPiece:(UIMenuController *)controller
+{
+    CGPoint locationInSuperview = [pieceForReset convertPoint:CGPointMake(CGRectGetMidX(pieceForReset.bounds), CGRectGetMidY(pieceForReset.bounds)) toView:[pieceForReset superview]];
+    
+    [[pieceForReset layer] setAnchorPoint:CGPointMake(0.5, 0.5)];
+    [pieceForReset setCenter:locationInSuperview];
+    
+    [UIView beginAnimations:nil context:nil];
+    [pieceForReset setTransform:CGAffineTransformIdentity];
+    [UIView commitAnimations];
+}
+
+// UIMenuController requires that we can become first responder or it won't display
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+
+//该方法使得图片变大 触摸开始
+-(void)animateFirstTouchAtPoint:(CGPoint)touchPoint forView:(UIView *)theView 
+{
+	// Pulse the view by scaling up, then move the view to under the finger.
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:GROW_ANIMATION_DURATION_SECONDS];
+	theView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+   
+    
+    
+	[UIView commitAnimations];
+}
+//该方法使得图片变大  触摸结束
+-(void)animateEndTouchAtPoint:(CGPoint)touchPoint forView:(UIView *)theView 
+{
+	// Pulse the view by scaling up, then move the view to under the finger.
+	[UIView beginAnimations:nil context:nil];
+	[UIView setAnimationDuration:GROW_ANIMATION_DURATION_SECONDS];
+	theView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    
+    
+	[UIView commitAnimations];
+}
+
+
+#pragma mark -
+#pragma mark === Touch handling  ===
+#pragma mark
+
+// shift the piece's center by the pan amount
+// reset the gesture recognizer's translation to {0, 0} after applying so the next callback is a delta from the current position
+- (void)panPiece:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    UIView *piece = [gestureRecognizer view];
+//    [self currentAlphabet:piece];
+    
+    /////把当前移动的view 放到最前
+    [self.view bringSubviewToFront:piece];
+    CGPoint translation;
+    //    [self adjustAnchorPointForGestureRecognizer:gestureRecognizer];
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+        translation = [gestureRecognizer translationInView:[piece superview]];
+        //        [piece setCenter:CGPointMake([piece center].x + translation.x, [piece center].y + translation.y)];
+        //        [gestureRecognizer setTranslation:CGPointZero inView:[piece superview]];
+        [self animateFirstTouchAtPoint:translation forView:piece];
+    }else if([gestureRecognizer state] ==UIGestureRecognizerStateEnded){       
+        translation = [gestureRecognizer translationInView:[piece superview]];
+        [piece setCenter:CGPointMake([piece center].x + translation.x, [piece center].y + translation.y)];
+        [self animateEndTouchAtPoint:translation forView:piece];
+    }else if([gestureRecognizer state] == UIGestureRecognizerStateChanged){
+        translation = [gestureRecognizer translationInView:[piece superview]];
+        [piece setCenter:CGPointMake([piece center].x + translation.x, [piece center].y + translation.y)];
+        [gestureRecognizer setTranslation:CGPointZero inView:[piece superview]];
+    }
+    
+    NSLog(@"Current Location is x :%f ,y :%f ",[piece center].x + translation.x,[piece center].y +translation.y);
+}
+
+// rotate the piece by the current rotation
+// reset the gesture recognizer's rotation to 0 after applying so the next callback is a delta from the current rotation
+- (void)rotatePiece:(UIRotationGestureRecognizer *)gestureRecognizer
+{
+    //    UIView *piece = [gestureRecognizer view];
+    //    [self currentAlphabet:piece];
+    [self adjustAnchorPointForGestureRecognizer:gestureRecognizer];
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan || [gestureRecognizer state] == UIGestureRecognizerStateChanged) {
+        [gestureRecognizer view].transform = CGAffineTransformRotate([[gestureRecognizer view] transform], [gestureRecognizer rotation]);
+        [gestureRecognizer setRotation:0];
+    }
+}
+
+// scale the piece by the current scale
+// reset the gesture recognizer's rotation to 0 after applying so the next callback is a delta from the current scale
+- (void)scalePiece:(UIPinchGestureRecognizer *)gestureRecognizer
+{   
+    
+    //    UIView *piece = [gestureRecognizer view];
+    //    [self currentAlphabet:piece];
+    [self adjustAnchorPointForGestureRecognizer:gestureRecognizer];
+    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan || [gestureRecognizer state] == UIGestureRecognizerStateChanged) {
+        [gestureRecognizer view].transform = CGAffineTransformScale([[gestureRecognizer view] transform], [gestureRecognizer scale], [gestureRecognizer scale]);
+        [gestureRecognizer setScale:1];
+    }
+}
+
+// ensure that the pinch, pan and rotate gesture recognizers on a particular view can all recognize simultaneously
+// prevent other gesture recognizers from recognizing simultaneously
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    //    // if the gesture recognizers's view isn't one of our pieces, don't allow simultaneous recognition
+    
+    //    if (gestureRecognizer.view != firstPieceView && gestureRecognizer.view != secondPieceView && gestureRecognizer.view != thirdPieceView)
+    //        return NO;
+    
+    
+
+    int i = 0;
+    for (UIView *subview in [self.view subviews]){
+        
+        if (gestureRecognizer.view != [[self.view subviews] objectAtIndex:i]) {
+            return NO;
+        } 
+        i++;
+    }
+    
+    
+//    if (   gestureRecognizer.view != [[self.view subviews] objectAtIndex:0] 
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:1] 
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:2]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:3]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:4]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:5]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:6]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:7]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:8]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:9]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:10]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:11]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:12]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:13]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:14]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:15]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:16]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:17]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:18]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:19]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:20]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:21]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:22]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:23]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:24]
+//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:25]
+//        )
+        
+    
+    // if the gesture recognizers are on different views, don't allow simultaneous recognition
+    if (gestureRecognizer.view != otherGestureRecognizer.view)
+        return NO;
+    
+    // if either of the gesture recognizers is the long press, don't allow simultaneous recognition
+    if ([gestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]] || [otherGestureRecognizer isKindOfClass:[UILongPressGestureRecognizer class]])
+        return NO;
+    
+    return YES;
+}
+
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

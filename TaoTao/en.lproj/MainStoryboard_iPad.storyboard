@@ -226,7 +226,7 @@
                                 <rect key="frame" x="782" y="185" width="174" height="420"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="giraffe.png">
+                                <state key="normal" backgroundImage="37.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -238,10 +238,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ppm-nl-jBx">
-                                <rect key="frame" x="108" y="442" width="282" height="246"/>
+                                <rect key="frame" x="141" y="414" width="282" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="elephant.png">
+                                <state key="normal" backgroundImage="45.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -253,10 +253,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5ba-SA-uT2">
-                                <rect key="frame" x="621" y="466" width="231" height="213"/>
+                                <rect key="frame" x="621" y="453" width="231" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="tiger.png">
+                                <state key="normal" backgroundImage="44.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -271,7 +271,7 @@
                                 <rect key="frame" x="838" y="202" width="87" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="monkey.png">
+                                <state key="normal" backgroundImage="43.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -283,10 +283,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v8b-5d-3o9">
-                                <rect key="frame" x="32" y="35" width="212" height="53"/>
+                                <rect key="frame" x="32" y="35" width="212" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="cloud-1.png">
+                                <state key="normal" backgroundImage="41.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -295,10 +295,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="964-y1-ihu">
-                                <rect key="frame" x="679" y="15" width="82" height="54"/>
+                                <rect key="frame" x="680" y="7" width="137" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="cloud-3.png">
+                                <state key="normal" backgroundImage="40.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -307,10 +307,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ecf-iu-WeG">
-                                <rect key="frame" x="164" y="42" width="170" height="68"/>
+                                <rect key="frame" x="178" y="41" width="170" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="cloud-2.png">
+                                <state key="normal" backgroundImage="41.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -322,7 +322,7 @@
                                 <rect key="frame" x="367" y="376" width="311" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="taotao-1.png">
+                                <state key="normal" image="38.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -477,20 +477,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud-1.png" width="358" height="221"/>
-        <image name="cloud-2.png" width="225" height="147"/>
-        <image name="cloud-3.png" width="408" height="224"/>
+        <image name="37.png" width="183" height="404"/>
+        <image name="38.png" width="520" height="534"/>
+        <image name="40.png" width="408" height="224"/>
+        <image name="41.png" width="225" height="147"/>
+        <image name="43.png" width="120" height="208"/>
+        <image name="44.png" width="278" height="193"/>
+        <image name="45.png" width="308" height="284"/>
         <image name="continue_selection@2x.png" width="309" height="104"/>
-        <image name="elephant.png" width="308" height="284"/>
-        <image name="giraffe.png" width="183" height="404"/>
         <image name="highscore@2x.png" width="313" height="102"/>
-        <image name="monkey.png" width="120" height="208"/>
         <image name="next_pressed@2x.png" width="69" height="57"/>
         <image name="replay@2x.png" width="58" height="61"/>
         <image name="setting@2x.png" width="313" height="102"/>
         <image name="start@2x.png" width="306" height="108"/>
-        <image name="taotao-1.png" width="520" height="534"/>
-        <image name="tiger.png" width="278" height="193"/>
     </resources>
     <classes>
         <class className="AboutUsViewController" superclassName="UIViewController">

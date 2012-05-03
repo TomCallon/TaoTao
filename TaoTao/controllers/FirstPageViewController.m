@@ -44,7 +44,7 @@
     
          
         NSInteger pageInteger  =5;
-        NSString *pageName  = [NSString stringWithFormat:@"%d.png",pageInteger];
+        NSString *pageName  = [NSString stringWithFormat:@"%da.png",pageInteger];
         UIImage *image = [UIImage imageNamed:pageName];
         UIImageView *imageView;
         imageView = [[UIImageView alloc]initWithImage:image];
@@ -64,6 +64,7 @@
 
 
 }
+
 
 - (void)viewDidUnload
 {

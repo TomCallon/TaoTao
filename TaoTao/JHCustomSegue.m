@@ -36,7 +36,7 @@
         [dst.view setFrame:frame];
         [dst.view.layer  setOpacity:0.0 ];
         [UIView beginAnimations:@"" context:nil];
-        [UIView setAnimationDuration:3];
+        [UIView setAnimationDuration:2];
         frame.origin.x -= 1000 ;
         [dst.view setFrame:frame];
         [dst.view.layer  setOpacity:1.0 ];
