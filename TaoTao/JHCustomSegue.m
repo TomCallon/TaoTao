@@ -18,19 +18,20 @@
 
 
 -(void)perform
-
-
 {
+   
+    
+    
        
     
     UIViewController *src = (UIViewController *) self.sourceViewController;
     UIViewController *dst = (UIViewController *) self.destinationViewController;
     
     
-        //[dst.view removeFromSuperview ] ;
-       // [src.view addSubview:dst.view];
+        [dst.view removeFromSuperview ] ;
+        [src.view addSubview:dst.view];
 
-        [src.view insertSubview:dst.view atIndex:0];
+//        [src.view insertSubview:dst.view atIndex:0];
 
         CGRect frame = CGRectMake(1000, 0, 320, 152);
         [dst.view setFrame:frame];
@@ -43,17 +44,6 @@
 
         [UIView commitAnimations];
     
-
-    
-   
-    
-        
-           
-    
-    
-   
-    
-   
     
 }
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "TomDetailViewController.h"
 
-@interface DetailViewController ()
+@interface TomDetailViewController ()
 
 @end
 
-@implementation DetailViewController
+@implementation TomDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

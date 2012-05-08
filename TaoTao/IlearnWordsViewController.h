@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IlearnWordsViewController : UIViewController
+@interface IlearnWordsViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+{
+ 	  NSArray *list;
+
+
+}
+
+@property (nonatomic,retain) NSArray *list;
+
 - (IBAction)backButton:(id)sender;
 
 @end

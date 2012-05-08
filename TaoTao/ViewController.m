@@ -121,7 +121,7 @@
         NSString *imageNumber = [NSString stringWithFormat:@"%@",[array1 objectAtIndex:i]];
         UIImage *image = [UIImage imageNamed:imageNumber];
         [button setImage:image forState :UIControlStateNormal];
-        
+        [button setFrame :CGRectMake(0,0,image.size.width * 0.7,image.size.height * 0.7)];
         
         if ([button tag] ==4) {
             [button setTitle:@"fcuk" forState :UIControlStateNormal];
@@ -134,7 +134,7 @@
         i++;
     }
 
-    NSArray * array2  = [[NSArray alloc]initWithObjects:@"28",@"29",@"30",@"31",@"33",@"34",@"35",@"36",@"32", nil];
+    NSArray * array2  = [[NSArray alloc]initWithObjects:@"33",@"34",@"35",@"36",@"32",@"30",@"31",@"28",@"29", nil];
     
      i=0;
      
@@ -145,22 +145,54 @@
         NSString *title = levels;
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:title forState:UIControlStateNormal];
-        [button setTag:i];
+        NSInteger buttonTag  =[title  intValue];
+        [button setTag:buttonTag]; 
         rowIndex = i/buttonsPerLine;
         rankIndex = i%buttonsPerLine;
         button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
         
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array2 objectAtIndex:i]];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",levels];
         UIImage *image = [UIImage imageNamed:imageNumber];
         [button setImage:image forState :UIControlStateNormal];
+        [button setFrame :CGRectMake(0,0,image.size.width * 0.85,image.size.height * 0.85)];
         [self addGestureRecognizersToPiece:button];
+    
+        if ([button tag] ==28) {
+            [button setCenter:CGPointMake(759.000000 ,196.000000 )];
+        }
+        if ([button tag] ==29) {
+            [button setCenter:CGPointMake(678.000000 ,165.000000 )];
+        }
+        if ([button tag] ==30) {
+            [button setCenter:CGPointMake(817.000000 ,245.000000 )];
+
+        }
+        if ([button tag] ==31) {
+            [button setCenter:CGPointMake(108.000000 ,262.000000 )];
+        } 
+        if ([button tag] ==32) {
+            [button setCenter:CGPointMake(510.049988 ,385.975006 )];
+        }
+        
+        if ([button tag] ==33) {
+            [button setCenter:CGPointMake(454.000000 ,445.000000 )];
+        } 
+        if ([button tag] ==34) {
+            [button setCenter:CGPointMake(523.000000 ,209.000000 )];
+        } 
+        if ([button tag] ==35) {
+            [button setCenter:CGPointMake(878.000000 ,307.000000)];
+        }
+        if ([button tag] ==36) {
+            [button setCenter:CGPointMake(142.200012 ,308.350006 )];
+        }
         [page2View addSubview :button];
         i++;
     }
     
     
-    NSArray * array3  = [[NSArray alloc]initWithObjects:@"19",@"20",@"21",@"22",@"23",@"24",@"25",@"26",@"27", nil];
+    NSArray * array3  = [[NSArray alloc]initWithObjects:@"20",@"21",@"22",@"23",@"24",@"25",@"26",@"27",@"19", nil];
     
     i=0;
 
@@ -169,21 +201,59 @@
         NSString *title = levels;
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:title forState:UIControlStateNormal];
-        [button setTag:i];
+        NSInteger buttonTag  =[title  intValue];
+        [button setTag:buttonTag];    
         rowIndex = i/buttonsPerLine;
         rankIndex = i%buttonsPerLine;
         button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
         
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array3 objectAtIndex:i]];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",levels];
         UIImage *image = [UIImage imageNamed:imageNumber];
         [button setImage:image forState :UIControlStateNormal];
+        [button setFrame :CGRectMake(0,0,image.size.width * 0.85,image.size.height * 0.85)];
         [self addGestureRecognizersToPiece:button];
+        
+        
+        if ([button tag] ==19) {
+            [button setCenter:CGPointMake(586.000000 ,546.950012 )];
+        }
+        if ([button tag] ==20) {
+            [button setCenter:CGPointMake(126.800003 ,110.425003 )];
+        }
+        if ([button tag] ==21) {
+            [button setCenter:CGPointMake(961.175049 ,336.924988)];
+        }
+        if ([button tag] ==22) {
+            [button setCenter:CGPointMake(895.000000 ,358.149994 )];
+            
+        }
+        if ([button tag] ==23) {
+            [button setCenter:CGPointMake(711.724976 ,245.399994)];
+        }
+        if ([button tag] ==24) {
+            [button setCenter:CGPointMake(530.474976 ,309.799988 )];
+        } 
+        if ([button tag] ==25) {
+            [button setCenter:CGPointMake(374.599976 ,280.250000 )];
+        } 
+        if ([button tag] ==26) {
+            [button setCenter:CGPointMake(115.750000 ,341.125000 )];
+        } 
+        if ([button tag] ==27) {
+            [button setCenter:CGPointMake(510.900024 ,457.950012 )];
+        }
+       
+        
+
+        
+        
+        
         [page3View addSubview :button];
         i++;
     }
     
-    NSArray * array4 = [[NSArray alloc]initWithObjects:@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18", nil];
+    NSArray * array4 = [[NSArray alloc]initWithObjects:@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18", nil];
     
     i=0;
     
@@ -192,22 +262,66 @@
         NSString *title = levels;
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:title forState:UIControlStateNormal];
-        [button setTag:i];
+        NSInteger buttonTag  =[title  intValue];
+        [button setTag:buttonTag];    
         rowIndex = i/buttonsPerLine;
         rankIndex = i%buttonsPerLine;
         button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
         
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array4 objectAtIndex:i]];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",levels];
         UIImage *image = [UIImage imageNamed:imageNumber];
         [button setImage:image forState :UIControlStateNormal];
+        [button setFrame :CGRectMake(0,0,image.size.width * 0.85,image.size.height * 0.85)];
         [self addGestureRecognizersToPiece:button];
+        if ([button tag] ==9) {
+            
+            [button setCenter:CGPointMake(524.665039 ,602.512512)];
+        }
+        if ([button tag] ==10) {
+            
+            [button setCenter:CGPointMake(866.665039 ,460.512512)];
+        } 
+        if ([button tag] ==11) {
+            
+            [button setCenter:CGPointMake(173.832031 ,503.108032)];
+        }
+        if ([button tag] ==12) {
+            
+            [button setCenter:CGPointMake(633.125977 ,549.828003 )];
+        }
+        if ([button tag] ==13) {
+            
+            [button setCenter:CGPointMake(476.139526 ,537.139526 )];
+        }
+        if ([button tag] ==14) {
+            
+            [button setCenter:CGPointMake(764.750000 ,514.474976)];
+        }
+        if ([button tag] ==15) {
+            
+            [button setCenter:CGPointMake(327.139526 ,536.139526 )];
+        }
+        if ([button tag] ==16) {
+            
+            [button setCenter:CGPointMake(908.549988 ,259.125000 )];
+        }
+        if ([button tag] ==17) {
+            
+            [button setCenter:CGPointMake(792.025024 ,366.475006 )];
+        } if ([button tag] ==18) {
+            
+            [button setCenter:CGPointMake(852.500000 ,332.075012 )];
+        }
+        
+        
+
         [page4View addSubview :button];
         i++;
     }
     
     
-    NSArray * array5 = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
+    NSArray * array5 = [[NSArray alloc]initWithObjects:@"3",@"4",@"6",@"7",@"8", nil];
     
     i=0;
     
@@ -216,22 +330,45 @@
         NSString *title = levels;
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:title forState:UIControlStateNormal];
-        [button setTag:i];
+        NSInteger buttonTag  =[title  intValue];
+        [button setTag:buttonTag];
         rowIndex = i/buttonsPerLine;
         rankIndex = i%buttonsPerLine;
         button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
         
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array5 objectAtIndex:i]];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",levels];
         UIImage *image = [UIImage imageNamed:imageNumber];
         [button setImage:image forState :UIControlStateNormal];
+        [button setFrame :CGRectMake(0,0,image.size.width * 0.857,image.size.height * 0.857)];
         [self addGestureRecognizersToPiece:button];
+        if ([button tag] ==3) {
+            
+            [button setCenter:CGPointMake(774.665039 ,265.512512 )];
+        }
+        if ([button tag] ==4) {
+            
+            [button setCenter:CGPointMake(332.665009 ,340.512512 )];
+        } 
+        if ([button tag] ==6) {
+            
+            [button setCenter:CGPointMake(897.832031 ,197.108002)];
+        }
+        if ([button tag] ==7) {
+            
+            [button setCenter:CGPointMake(924.125977 ,280.828003 )];
+        }if ([button tag] ==8) {
+            
+            [button setCenter:CGPointMake(928.139526 ,357.139496)];
+        }
+
+
         [page5View addSubview :button];
         i++;
     }
     
     
-    NSArray * array6 = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",@"4", nil];
+    NSArray * array6 = [[NSArray alloc]initWithObjects:@"2",@"3", nil];
     
     i=0;
     
@@ -240,16 +377,29 @@
         NSString *title = levels;
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:title forState:UIControlStateNormal];
-        [button setTag:i];
+        NSInteger buttonTag  =[title  intValue];
+        [button setTag:buttonTag];      
         rowIndex = i/buttonsPerLine;
         rankIndex = i%buttonsPerLine;
         button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
         
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array6 objectAtIndex:i]];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",levels];
         UIImage *image = [UIImage imageNamed:imageNumber];
         [button setImage:image forState :UIControlStateNormal];
+        [button setFrame :CGRectMake(0,0,image.size.width * 0.857,image.size.height * 0.857)];
         [self addGestureRecognizersToPiece:button];
+        
+        if ([button tag] ==2) {
+            
+            [button setCenter:CGPointMake(451.126007,444.828003)];
+        }
+        if ([button tag] ==3) {
+            
+            [button setCenter:CGPointMake(775.832031 ,474.108002)];
+        }
+        
+
         [page6View addSubview :button];
         i++;
     }
@@ -258,7 +408,7 @@
     ///TaoTao
     taotaoButton = [[UIButton alloc]initWithFrame:CGRectMake(580, 560, 190, 250)];
     
-    UIImage *taotaoImage = [UIImage imageNamed:@"taotao.png"];
+    UIImage *taotaoImage = [UIImage imageNamed:@"39.png"];
     [taotaoButton setTag:0];
     [taotaoButton setBackgroundImage:taotaoImage forState:UIControlStateNormal];
     
@@ -267,7 +417,6 @@
     taotaoButton.backgroundColor = [UIColor clearColor];
     [taotaoButton setCenter:CGPointMake(550, 520)]; 
     [taotaoButton removeFromSuperview];
-    [page7View addSubview :taotaoButton];
     [page1View addSubview :taotaoButton];
 
 
@@ -284,7 +433,6 @@
     elephantButton.backgroundColor = [UIColor clearColor];
     [elephantButton setCenter:CGPointMake(370, 200)];
     [elephantButton removeFromSuperview];
-    [page7View addSubview:elephantButton];
     [page1View addSubview :elephantButton];
     [elephantButton release];
     
@@ -302,7 +450,6 @@
     tigerButton.backgroundColor = [UIColor clearColor];
     [tigerButton setCenter:CGPointMake(700, 100)];
     [tigerButton removeFromSuperview];
-    [page7View addSubview:tigerButton];
     [page1View addSubview :tigerButton];
     [tigerButton release];
     
@@ -319,7 +466,6 @@
     giraffeButton.backgroundColor = [UIColor clearColor];
     [giraffeButton setCenter:CGPointMake(700, 350)]; 
     [giraffeButton removeFromSuperview];
-    [page7View addSubview:giraffeButton];
     [page1View addSubview :giraffeButton];
     [giraffeButton release];
     
@@ -337,7 +483,6 @@
     monkeyButton.backgroundColor = [UIColor clearColor];
     [monkeyButton setCenter:CGPointMake(710, 300)];  
     [monkeyButton removeFromSuperview];
-    [page5View addSubview:monkeyButton];
     [page1View addSubview :monkeyButton];
     [monkeyButton release];
     
@@ -388,7 +533,7 @@
 
     
 
-       NSArray * array  = [[NSArray alloc]initWithObjects:@"1",nil];
+       NSArray * array  = [[NSArray alloc]initWithObjects:@"37",@"1",@"43",@"44",@"45",nil];
 //        int leagueNumber = [array count];
         
         i=1;
@@ -398,10 +543,11 @@
         
         for (NSString* levels in array){
             
-            NSString *title = levels;
+             NSString *title = levels;
             UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
             [button setTitle:title forState:UIControlStateNormal];
-            [button setTag:i];
+            NSInteger buttonTag  =[title  intValue];
+            [button setTag:buttonTag];
             rowIndex = i/buttonsPerLine;
             rankIndex = i%buttonsPerLine;
             
@@ -410,18 +556,34 @@
             
             [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
             
-            NSString *imageNumber = [NSString stringWithFormat:@"%d",i];
+            NSString *imageNumber = [NSString stringWithFormat:@"%@",levels];
             UIImage *image = [UIImage imageNamed:imageNumber];
             [button setImage:image forState :UIControlStateNormal];
+            [button setFrame :CGRectMake(0,0,image.size.width * 0.857,image.size.height * 0.857)];
 
-            
+             
             if ([button tag] ==1) {
-                
-                [button setFrame:CGRectMake(-10,-10,1030,480)];
-                [button setCenter:CGPointMake(500,236)];
-                [button setImage:image forState :UIControlStateNormal];
-                
+            
+                [button setCenter:CGPointMake(504,261)];
             }
+            if ([button tag] ==37) {
+                
+                [button setCenter:CGPointMake(603,203)];
+            }
+            if ([button tag] ==43) {
+                
+                [button setCenter:CGPointMake(942,159)];
+            }
+            if ([button tag] ==44) {
+                
+                [button setCenter:CGPointMake(857,281)];
+            }
+            if ([button tag] ==45) {
+                
+                [button setCenter:CGPointMake(188,195)];
+
+            }
+            
             [self addGestureRecognizersToPiece:button];
 
             [page7View addSubview :button];
@@ -455,7 +617,7 @@
         default:
             break;
     }
-    
+    [self addGestureRecognizersToPiece:_currentView];
     [self.view addSubview:_currentView];
     
     
@@ -478,11 +640,26 @@
     
     
     NSLog(@"The button was clicked by %@",button);
-
-
+//   [self performSegueWithIdentifier:@"ShowDetailSegue" sender:self];  
+//
+//   JHCustomSegue * myCustomSegue = [[JHCustomSegue alloc]init];
+//   [myCustomSegue perform]; 
+//   [myCustomSegue release];
 
 }
 
+
+-(void)setBottomBackground{
+
+    UIImageView*  bottomBackground = [[UIImageView alloc]initWithFrame :CGRectMake(0,660,1024,88)];
+    UIImage *image = [UIImage imageNamed:@"Bottomground.png"];
+    
+    [bottomBackground setImage :image];
+    
+    [self.view addSubview:bottomBackground];
+
+
+}
 #pragma mark -
 #pragma mark === view life  ===
 #pragma mark
@@ -492,7 +669,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-
+    [self setBottomBackground];
+    
+    
     [self.navigationController.navigationBar setHidden:YES];
     [self addContentsButtons:1];
     [self showPage:1];
@@ -503,8 +682,8 @@
     [self.view addSubview: [self pageNumberLabel]];
     
     
-    [self.view addSubview: [self backButton]];
-//    [self.view bringSubviewToFront :[self backButton]];
+//    [self.view addSubview: [self backButton]];
+//   [self.view bringSubviewToFront:[self backButton]];
     
     
     
@@ -560,7 +739,7 @@
     if (_textLabel == nil) {
         label = [[UILabel alloc]initWithFrame:frame];
         label.backgroundColor = [UIColor clearColor];
-        [label setText:@"        One  day, a  penguin comes to the zoo. And the tiger, elephant, monkey,and giraffe in the zoo say hello to him one after another .” \r\n Taotao says : “Hello ,guys ,I am Taotao”"];
+        [label setText:@"        One day, a penguin named Taotao came to live at the zoo.He was welcomed by all the animals.\r\n The tiger, the monkey, the elephant and the giraffe all said hello to him. \r\n “Hello,” he replied. “I am Taotao!"];
         label.numberOfLines = 0;
     }
     [_textLabel setTextColor:[UIColor brownColor]];
@@ -587,13 +766,17 @@
     NSArray *pageTextArray;
     if (showEnglish) {
         page0 = [NSString stringWithFormat:@"TomCallon"];
-        page1 = [NSString stringWithFormat:@"        One  day, a  penguin comes to the zoo. And the tiger, elephant, monkey,and giraffe in the zoo say hello to him one after another .” \r\n Taotao says : “Hello ,guys ,I am Taotao”"];  
-        page2 = [NSString stringWithFormat:@"        Because of the arrival of Taotao,the zoo was crammed with people everyday.All the tourists had taken out their cameras and took little snap shots of cute faces of Taotao.But gradually,the enthusiasm of the tourists declined,and the zoo returned to the normal."];
-        page3 = [NSString stringWithFormat:@"One night,the gate guard forgot to lock up the door of the zoo,Taotao escaped from the zoo.Outside the zoo were skyscrapers everywhere.The whole city was shining out marvelous light.  Surrounded by the remarkable light,Taotao,didn’t know where to go."];
-        page4 = [NSString stringWithFormat:@"The sun rose slowly, and with each passing moment, the number of people and cars around Taotao increased .Taotao walked into the middle of the road,interrupting the traffic. People started honking their car horns at him angrily."];
-        page5 = [NSString stringWithFormat:@"Soon Taotao realized he was so hungry. Fortunately, he met a chef and said,”Mr. Chef,will you be kind enough to give me a fish?”The chef took a look at Taotao,who didn’t have a penny in his pocket, and shook his head reluctantly."];
-        page6= [NSString stringWithFormat:@"Still hungry, Taotao also realized he was so thirsty. He met a old granny,”Granny,will you be kind enough ]to give me some water?”Granny pumped her reading glasses and said,”Who are you?”"];
-        page7 = [NSString stringWithFormat:@"Taotao was so hungry and thirsty that he had to stop.With nowhere else to go, he decided to go back to the zoo. The Tiger, the elephant, the monkey, and the giraffe were all so happy and said,”Taotao,welcome home!“Taotao had travelled the whole city, but realized there was no place like home."];
+        page1 = [NSString stringWithFormat:@"        One day, a penguin named Taotao came to live at the zoo.He was welcomed by all the animals.\r\n The tiger, the monkey, the elephant and the giraffe all said hello to him. \r\n “Hello,” he replied. “I am Taotao!"];  
+        page2 = [NSString stringWithFormat:@"        Everyone was so happy Taotao was there. All the people visiting the zoo wanted to take his picture!"];
+        page3 = [NSString stringWithFormat:@"One night the zookeeper forgot to lock Taotao’s cage door. Taotao wandered out of his cage, out of the zoo, and into the big, bright city. He didn’t know where to go! As Taotao walked and walked, the night became longer and longer. "];
+                 
+        page4 = [NSString stringWithFormat:@"Soon he lost track of the time - and where he was! The sun began to rise over the tops of the buildings as night turned into morning. People filled the street, and Taotao found himself blocking traffic as cars honked their horns at him!"];
+                 
+        page5 = [NSString stringWithFormat:@"After a while Taotao became very hungry. He came to a restaurant and asked the chef, “Please sir, can I have some fish?”.\r\nThe chef took one look at Taotao - who didn’t have even one penny in his pocket - and shook his head. Taotao kept walking."];
+                 
+        page6= [NSString stringWithFormat:@"By this time Taotao was hungry and thirsty. Coming up to an old Granny, he asked, “Please, can I have a drink of water?”She raised her eyeglasses to see him better. Confused she said, “Who are you?”"];
+                 
+        page7 = [NSString stringWithFormat:@"Taotao had no other choice but to keep walking. His stomach was empty and his throat dry, but he pressed on. Then Taotao heard a noise. Then another. He knew those noises. It was his friends - the elephant, tiger, giraffe and monkey! He was home! Taotao followed the sounds all the way back to the zoo.“Welcome home, Taotao!” his friends said. Taotao had seen the whole city, but now he knew there was no place like home. "];
 
     }else {
         page0 = [NSString stringWithFormat:@"TomCallon"];
@@ -620,15 +803,14 @@
             [_textLabel setTextColor:[UIColor brownColor]];
             [_autoPlayingButton setFrame:playButtonframe];
             [self addContentsButtons:pageInteger];
-//            [self performSegueWithIdentifier:@"PageSegue1" sender:self];
             break;
         case 2:
-            frame = CGRectMake(220, 40, 380, 150);
+            frame = CGRectMake(220, 23, 380, 150);
             pageText = [pageTextArray objectAtIndex:pageInteger];
             [_textLabel setTextColor:[UIColor brownColor]];
             playButtonframe = CGRectMake(600, 150, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
-            [_autoPlayingButton setCenter:CGPointMake(600, 190)];
+            [_autoPlayingButton setCenter:CGPointMake(420, 160)];
             break;
         case 3:
             frame = CGRectMake(80, 523, 390, 150);
@@ -636,7 +818,7 @@
             [_textLabel setTextColor:[UIColor whiteColor]];
             playButtonframe = CGRectMake(430, 625, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
-            [_autoPlayingButton setCenter:CGPointMake(470, 670)];
+            [_autoPlayingButton setCenter:CGPointMake(400, 660)];
             break;
         case 4:
             frame = CGRectMake(510, 20, 320, 150);
@@ -644,7 +826,7 @@
             [_textLabel setTextColor:[UIColor brownColor]];
             playButtonframe = CGRectMake(780, 120, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
-            [_autoPlayingButton setCenter:CGPointMake(830, 170)];
+            [_autoPlayingButton setCenter:CGPointMake(700, 170)];
             break;
         case 5:
             frame = CGRectMake(650, 470, 320, 150);
@@ -663,12 +845,12 @@
             [_autoPlayingButton setCenter:CGPointMake(960, 190)];
             break;
         case 7:
-            frame = CGRectMake(350, 500, 320, 180);
+            frame = CGRectMake(350, 420, 320, 240);
             pageText = [pageTextArray objectAtIndex:pageInteger];
             [_textLabel setTextColor:[UIColor brownColor]];
             playButtonframe = CGRectMake(670, 680, 70, 70);
             [_autoPlayingButton setFrame:playButtonframe];
-            [_autoPlayingButton setCenter:CGPointMake(670, 680)];
+            [_autoPlayingButton setCenter:CGPointMake(670, 665)];
             break;
         default:
             break;
@@ -689,9 +871,6 @@
     [self.view insertSubview:_imageView atIndex:0];
     [imageView release];
     
-//    JHCustomSegue * myCustomSegue = [[JHCustomSegue alloc]init];
-//    [myCustomSegue perform]; 
-//    [myCustomSegue release];
     
 }
 
@@ -1021,24 +1200,24 @@
 -(void)animateFirstTouchAtPoint:(CGPoint)touchPoint forView:(UIView *)theView 
 {
 	// Pulse the view by scaling up, then move the view to under the finger.
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:GROW_ANIMATION_DURATION_SECONDS];
-	theView.transform = CGAffineTransformMakeScale(1.1, 1.1);
-   
-    
-    
-	[UIView commitAnimations];
+//	[UIView beginAnimations:nil context:nil];
+//	[UIView setAnimationDuration:GROW_ANIMATION_DURATION_SECONDS];
+//	theView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+//   
+//    
+//    
+//	[UIView commitAnimations];
 }
 //该方法使得图片变大  触摸结束
 -(void)animateEndTouchAtPoint:(CGPoint)touchPoint forView:(UIView *)theView 
 {
 	// Pulse the view by scaling up, then move the view to under the finger.
-	[UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:GROW_ANIMATION_DURATION_SECONDS];
-	theView.transform = CGAffineTransformMakeScale(1.0, 1.0);
-    
-    
-	[UIView commitAnimations];
+//	[UIView beginAnimations:nil context:nil];
+//	[UIView setAnimationDuration:GROW_ANIMATION_DURATION_SECONDS];
+//	theView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+//    
+//    
+//	[UIView commitAnimations];
 }
 
 

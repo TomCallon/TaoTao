@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A5h-Uy-YGz">
-                                <rect key="frame" x="423" y="700" width="100" height="48"/>
+                                <rect key="frame" x="263" y="710" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="主菜单" backgroundImage="start@2x.png">
@@ -26,24 +26,12 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WpK-Tg-xyh">
-                                <rect key="frame" x="263" y="700" width="100" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="返回" backgroundImage="setting@2x.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <action selector="backButton:" destination="2" eventType="touchUpInside" id="e2U-1h-PQL"/>
+                                    <action selector="backButton:" destination="2" eventType="touchUpInside" id="INS-gR-Wg2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LOe-di-RfR">
-                                <rect key="frame" x="934" y="692" width="64" height="64"/>
+                                <rect key="frame" x="943" y="724" width="64" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="next_pressed@2x.png">
@@ -58,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vqM-yh-mM0">
-                                <rect key="frame" x="12" y="690" width="60" height="62"/>
+                                <rect key="frame" x="17" y="714" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="replay@2x.png">
@@ -73,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fiI-Fp-TnT">
-                                <rect key="frame" x="588" y="700" width="100" height="48"/>
+                                <rect key="frame" x="465" y="712" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="English" backgroundImage="continue_selection@2x.png">
@@ -88,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AUT-ZZ-E38">
-                                <rect key="frame" x="749" y="700" width="100" height="48"/>
+                                <rect key="frame" x="648" y="712" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Chinese" backgroundImage="highscore@2x.png">
@@ -133,10 +121,33 @@
                     <navigationItem key="navigationItem" id="hL8-EP-dgE"/>
                     <connections>
                         <segue destination="5jO-wb-1vS" kind="custom" identifier="PageSegue1" customClass="JHCustomSegue" id="KHT-m8-0Gq"/>
+                        <segue destination="rAw-k2-8e8" kind="custom" identifier="ShowDetailSegue" customClass="JHCustomSegue" id="06G-SS-geO"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="486" y="156"/>
+            <point key="canvasLocation" x="618" y="200"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hbB-FN-9WL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hB6-S8-jvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="rAw-k2-8e8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rgt-Zo-w51">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="eSG-3J-mH5">
+                                <rect key="frame" x="319" y="246" width="259" height="257"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2591" y="-52"/>
         </scene>
         <!--First Page View Controller-->
         <scene sceneID="upX-XT-7on">
@@ -151,7 +162,7 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1687" y="743"/>
+            <point key="canvasLocation" x="2723" y="979"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="0TZ-8E-AkF">
@@ -381,6 +392,26 @@
                                     <action selector="backButton:" destination="z2a-Pi-NHZ" eventType="touchUpInside" id="rdo-yS-DXs"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" id="kSc-MU-oeQ">
+                                <rect key="frame" x="244" y="86" width="519" height="627"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="87" id="ptP-kg-zXB">
+                                        <rect key="frame" x="0.0" y="22" width="519" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="519" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="z2a-Pi-NHZ" id="a4u-hZ-tUs"/>
+                                    <outlet property="delegate" destination="z2a-Pi-NHZ" id="5jt-PA-aK9"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -388,7 +419,7 @@
                     <navigationItem key="navigationItem" id="pSv-rS-fhH"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1671" y="1966"/>
+            <point key="canvasLocation" x="931" y="1446"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="qN3-9P-1nb">

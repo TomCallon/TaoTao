@@ -27,6 +27,26 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIImage *background = [UIImage imageNamed:@"background.png"];
+    UIImageView *backgroundImageView = [[UIImageView alloc]initWithImage:background];
+    
+    
+    CGRect  iPadFrame   = CGRectMake(0, 0, 1024, 768);
+    CGRect  iPhoneFrame = CGRectMake(0, 0, 480, 320);
+    CGRect  iOSFrame;
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+        iOSFrame = iPadFrame;
+    }else {
+        iOSFrame = iPhoneFrame;
+    };
+    
+    [backgroundImageView setFrame:iOSFrame];
+    [self.view insertSubview:backgroundImageView atIndex:0];
+    [backgroundImageView release];
+
+    
 
 }
 
@@ -34,6 +54,7 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
