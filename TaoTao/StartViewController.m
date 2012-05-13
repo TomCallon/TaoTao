@@ -132,7 +132,7 @@
     [self setCloudOneButton:nil];
     [self setCloudTwoButton:nil];
     [self setCloudThreeButton:nil];
-    
+     
     
 }
 
@@ -206,24 +206,43 @@
 }
 
 
-
 -(void)retateButton :(UIButton *)button{
-
+    
     CABasicAnimation *rotateButton = [CABasicAnimation animationWithKeyPath:@"transform"];
     [rotateButton setDuration:0.2];
     [rotateButton setFromValue:[NSValue valueWithCATransform3D:CATransform3DMakeRotation(-0.1, 0, 0, 1)]];
     [rotateButton setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeRotation(0.1, 0, 0, 1)]];
     [rotateButton setAutoreverses:YES];
-    [rotateButton setRepeatCount:1];
+    [rotateButton setRepeatCount:1000000];
     [rotateButton setRemovedOnCompletion:YES]; 
     [rotateButton setBeginTime:CACurrentMediaTime() + 1];
     
     
     [button.layer removeAllAnimations];
     [button.layer addAnimation:rotateButton forKey:@"rotateButton"];
-
-
+    
 }
+
+
+-(void)moveButton:(UIButton *)button{
+    
+    CABasicAnimation *fallButtonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    [fallButtonAnimation setDuration:20];
+    [fallButtonAnimation setFromValue:[NSValue valueWithCGPoint:CGPointMake(0, 0)]];
+    [fallButtonAnimation setToValue:[NSValue valueWithCGPoint:button.center]];
+    [fallButtonAnimation setFillMode:kCAFillModeForwards];
+    [fallButtonAnimation setRemovedOnCompletion:NO];    
+    fallButtonAnimation.delegate = self;
+    [fallButtonAnimation setRepeatCount :1000000];
+    
+    
+    [button.layer removeAllAnimations];
+    [button.layer addAnimation:fallButtonAnimation forKey:@"position"];
+    
+    
+}
+
+
 
 - (void)showMenu
 {
@@ -244,12 +263,17 @@
     [self addAnimationToAnimalsButton:_taotaoButton];
 
 }
+
 -(void)showEnvironments{
     
     ////show 
-    [self addAnimationToMenuButton:_cloudOneButton];
-    [self addAnimationToMenuButton:_cloudTwoButton];
-    [self addAnimationToMenuButton:_cloudThreeButton];
+    [self moveButton:_cloudOneButton];
+    [self moveButton:_cloudTwoButton];
+    [self moveButton:_cloudThreeButton];
+    
+    
+   
+    
 
     
     

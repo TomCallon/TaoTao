@@ -174,10 +174,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oZo-Zi-QeP">
-                                <rect key="frame" x="367" y="143" width="150" height="50"/>
+                                <rect key="frame" x="279" y="137" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="开始阅读" backgroundImage="start@2x.png">
+                                <state key="normal" title="Begin" backgroundImage="start@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -189,10 +189,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y1Z-s5-CGq">
-                                <rect key="frame" x="536" y="143" width="150" height="50"/>
+                                <rect key="frame" x="493" y="137" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="已学会单词" backgroundImage="setting@2x.png">
+                                <state key="normal" title="Vabularies" backgroundImage="setting@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -204,10 +204,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="saQ-fp-aEN">
-                                <rect key="frame" x="363" y="238" width="150" height="50"/>
+                                <rect key="frame" x="284" y="231" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="设定" backgroundImage="continue_selection@2x.png">
+                                <state key="normal" title="Settings" backgroundImage="continue_selection@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -219,10 +219,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9FU-gG-dQT">
-                                <rect key="frame" x="536" y="238" width="150" height="50"/>
+                                <rect key="frame" x="493" y="232" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="关于我们" backgroundImage="highscore@2x.png">
+                                <state key="normal" title="About Us" backgroundImage="highscore@2x.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -306,7 +306,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="964-y1-ihu">
-                                <rect key="frame" x="680" y="7" width="137" height="105"/>
+                                <rect key="frame" x="1011" y="20" width="137" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="40.png">
@@ -318,7 +318,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ecf-iu-WeG">
-                                <rect key="frame" x="178" y="41" width="170" height="92"/>
+                                <rect key="frame" x="443" y="20" width="170" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="41.png">
@@ -445,6 +445,46 @@
                                     <action selector="backButton:" destination="zbg-Mn-Gj7" eventType="touchUpInside" id="DqQ-s5-eMl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Program By " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="5iV-zB-lY9">
+                                <rect key="frame" x="324" y="292" width="280" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tom Callon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tCd-Ph-MIz">
+                                <rect key="frame" x="324" y="354" width="280" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Story By " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="obt-ya-nvI">
+                                <rect key="frame" x="495" y="289" width="280" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bel  Pang " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="11F-2z-uxm">
+                                <rect key="frame" x="495" y="354" width="280" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xlm-ST-pDM">
+                                <rect key="frame" x="559" y="269" width="311" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="38.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -452,7 +492,7 @@
                     <navigationItem key="navigationItem" id="z54-iE-ciM"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-201" y="3075"/>
+            <point key="canvasLocation" x="-433" y="2939"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="rIW-by-kqE">
@@ -478,6 +518,13 @@
                                     <action selector="backButton:" destination="exH-Kf-gp3" eventType="touchUpInside" id="FOG-wx-Fta"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No Settings !" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="84s-wG-bvB">
+                                <rect key="frame" x="401" y="345" width="151" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.86956521740000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -522,60 +569,6 @@
         <image name="setting@2x.png" width="313" height="102"/>
         <image name="start@2x.png" width="306" height="108"/>
     </resources>
-    <classes>
-        <class className="AboutUsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-            </relationships>
-        </class>
-        <class className="FirstPageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstPageViewController.h"/>
-        </class>
-        <class className="IlearnWordsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IlearnWordsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-            </relationships>
-        </class>
-        <class className="SettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-            </relationships>
-        </class>
-        <class className="StartViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="aboutUsButton:"/>
-                <relationship kind="action" name="animalsButton:"/>
-                <relationship kind="action" name="myVacabulariesButton:"/>
-                <relationship kind="action" name="settingsButton:"/>
-                <relationship kind="action" name="startReadingButton:"/>
-                <relationship kind="outlet" name="aboutUsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cloudOneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cloudThreeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cloudTwoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="elephantButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="girafeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="monkeyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myVacabulariesButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startReadingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="taotaoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tigerButon" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-                <relationship kind="action" name="pageBackButton:"/>
-                <relationship kind="action" name="pageForwardButton:"/>
-                <relationship kind="action" name="translationButton:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>

@@ -36,6 +36,7 @@
 		4A3957CE15525C8E00E4F731 /* 114.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A3957CD15525C8D00E4F731 /* 114.png */; };
 		4A41B68E154F03DB00DFA869 /* 72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A41B68D154F03DB00DFA869 /* 72x72.png */; };
 		4A41B690154F03E000DFA869 /* 144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A41B68F154F03E000DFA869 /* 144x144.png */; };
+		4A522B56155A52D900332F59 /* read.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A522B55155A52D900332F59 /* read.png */; };
 		4A713FB61551237200FF6211 /* JHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A713FB5155122DE00FF6211 /* JHCustomSegue.m */; };
 		4A88BAC5154F0BFD00950692 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A88BAC4154F0BFD00950692 /* AboutUsViewController.m */; };
 		4A88BAC8154F0C1E00950692 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A88BAC7154F0C1E00950692 /* SettingsViewController.m */; };
@@ -162,7 +163,7 @@
 		4A2AC3901550504800733000 /* 42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 42.png; sourceTree = "<group>"; };
 		4A2AC3911550504A00733000 /* 41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 41.png; sourceTree = "<group>"; };
 		4A2AC3941550506A00733000 /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40.png; sourceTree = "<group>"; };
-		4A30B6731556DA77006D5A0D /* TomDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = TomDetailViewController.h; sourceTree = "<group>"; };
+		4A30B6731556DA77006D5A0D /* TomDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TomDetailViewController.h; sourceTree = "<group>"; };
 		4A30B6741556DA77006D5A0D /* TomDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TomDetailViewController.m; sourceTree = "<group>"; };
 		4A31BCE7153DB42800C960F9 /* TaoTao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaoTao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A31BCEB153DB42800C960F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -186,6 +187,7 @@
 		4A3957CD15525C8D00E4F731 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
 		4A41B68D154F03DB00DFA869 /* 72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72x72.png; sourceTree = "<group>"; };
 		4A41B68F154F03E000DFA869 /* 144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144x144.png; sourceTree = "<group>"; };
+		4A522B55155A52D900332F59 /* read.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read.png; sourceTree = "<group>"; };
 		4A713FB4155122DE00FF6211 /* JHCustomSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHCustomSegue.h; sourceTree = "<group>"; };
 		4A713FB5155122DE00FF6211 /* JHCustomSegue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHCustomSegue.m; sourceTree = "<group>"; };
 		4A88BAC3154F0BFD00950692 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				4A2AC36F154FE58300733000 /* continue_selection@2x.png */,
 				4A2AC370154FE58500733000 /* start_pressed@2x.png */,
 				4A2AC36D154FE58100733000 /* start@2x.png */,
+				4A522B55155A52D900332F59 /* read.png */,
 			);
 			name = "Buttons Images";
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				4AD81A7C15539CCD00C0C629 /* ∞¥≈•-15.png in Resources */,
 				4AD81A7D15539CCD00C0C629 /* ∞¥≈•-16.png in Resources */,
 				4AD81A7E15539CCD00C0C629 /* ∞¥≈•-17.png in Resources */,
+				4A522B56155A52D900332F59 /* read.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,7 +843,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huang HaiZhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huang HaiZhi";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -854,6 +859,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -864,7 +871,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huang HaiZhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huang HaiZhi";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -873,6 +881,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -882,10 +892,14 @@
 		4A31BD09153DB42800C960F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huang HaiZhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huang HaiZhi";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaoTao/TaoTao-Prefix.pch";
 				INFOPLIST_FILE = "TaoTao/TaoTao-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -893,13 +907,55 @@
 		4A31BD0A153DB42800C960F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huang HaiZhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huang HaiZhi";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TaoTao/TaoTao-Prefix.pch";
 				INFOPLIST_FILE = "TaoTao/TaoTao-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		4A5803AA155ADAEF004158DB /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huang HaiZhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huang HaiZhi";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		4A5803AB155ADAEF004158DB /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huang HaiZhi";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huang HaiZhi";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TaoTao/TaoTao-Prefix.pch";
+				INFOPLIST_FILE = "TaoTao/TaoTao-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B8484A89-6D15-47E6-9F41-8954ECCC0826";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
 		};
 /* End XCBuildConfiguration section */
 
@@ -909,18 +965,20 @@
 			buildConfigurations = (
 				4A31BD06153DB42800C960F9 /* Debug */,
 				4A31BD07153DB42800C960F9 /* Release */,
+				4A5803AA155ADAEF004158DB /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 		4A31BD08153DB42800C960F9 /* Build configuration list for PBXNativeTarget "TaoTao" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A31BD09153DB42800C960F9 /* Debug */,
 				4A31BD0A153DB42800C960F9 /* Release */,
+				4A5803AB155ADAEF004158DB /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 /* End XCConfigurationList section */
 	};

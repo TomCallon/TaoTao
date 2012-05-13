@@ -90,18 +90,12 @@
     
     UIView *page7View = [[UIView alloc]initWithFrame:frame];
     page7View.backgroundColor = [UIColor clearColor];
-    
-    UIButton *taotaoButton;
-    UIButton *elephantButton;
-    UIButton *tigerButton;
-    UIButton *giraffeButton;
-    UIButton *monkeyButton;
-
+  
     
     
     
        
-    NSArray * array1  = [[NSArray alloc]initWithObjects:@"37",@"38",@"39",@"40",@"41",@"42",@"43",@"44",@"45",@"46", nil];
+    NSArray * array1  = [[NSArray alloc]initWithObjects:@"37",@"38",@"43",@"44",@"45",@"46", nil];
     
     int i=0;
     int rowIndex;
@@ -112,28 +106,62 @@
         NSString *title = levels;
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:title forState:UIControlStateNormal];
-        [button setTag:i];
+        NSInteger buttonTag  =[title  intValue];
+        [button setTag:buttonTag]; 
         rowIndex = i/buttonsPerLine;
         rankIndex = i%buttonsPerLine;
         button.frame = CGRectMake(buttonSepratorX+rankIndex*(buttonSepratorX+buttonLen), rowIndex*(buttonHigh+buttonSepratorY), buttonLen, buttonHigh);
         
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        NSString *imageNumber = [NSString stringWithFormat:@"%@",[array1 objectAtIndex:i]];
+        NSString *imageNumber = [NSString stringWithFormat:@"%@",levels];
         UIImage *image = [UIImage imageNamed:imageNumber];
         [button setImage:image forState :UIControlStateNormal];
-        [button setFrame :CGRectMake(0,0,image.size.width * 0.7,image.size.height * 0.7)];
         
-        if ([button tag] ==4) {
-            [button setTitle:@"fcuk" forState :UIControlStateNormal];
-            [button setFrame:CGRectMake(100,200,80,80)];
-            [button setImage:image forState :UIControlStateNormal];
-            
-        }
+        [button setFrame :CGRectMake(0,0,image.size.width * 0.73,image.size.height * 0.73)];
+        
+       
         [self addGestureRecognizersToPiece:button];
-//        [page1View addSubview :button];
+        
+        ///giraffe
+        if ([button tag] ==37) {
+            [button setCenter:CGPointMake(732.049988 ,350.399994 )];
+//            [self retateButton:button lastTime:0.31];
+        }
+        //taotao
+        
+        if ([button tag] ==38) {
+            [self retateButton:button lastTime:0.31];
+            [button setFrame :CGRectMake(0,0,image.size.width * 0.53,image.size.height * 0.53)];
+            [button setCenter:CGPointMake(560.000000 ,492.000000 )];
+//            
+//            if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+//
+//            }
+        } 
+        if ([button tag] ==44) {
+            [button setCenter:CGPointMake(706.299988 ,140.550003 )];
+            [self retateButton:button lastTime:0.31];
+        } 
+        if ([button tag] ==38) {
+            [button setCenter:CGPointMake(566.000000 ,421.000000 )];
+            [self retateButton:button lastTime:0.31];
+        }  
+        if ([button tag] ==43) {
+            [button setCenter:CGPointMake(745.000000 ,291.799988 )];
+            [self retateButton:button lastTime:0.31];
+        }
+        ///elephant
+        if ([button tag] ==45) {
+            [button setCenter:CGPointMake(330.799988 ,243.399994)];
+            [self retateButton:button lastTime:0.31];
+        }
+        
+        [page1View addSubview :button];
         i++;
     }
 
+    
+    
     NSArray * array2  = [[NSArray alloc]initWithObjects:@"33",@"34",@"35",@"36",@"32",@"30",@"31",@"28",@"29", nil];
     
      i=0;
@@ -157,12 +185,16 @@
         [button setImage:image forState :UIControlStateNormal];
         [button setFrame :CGRectMake(0,0,image.size.width * 0.85,image.size.height * 0.85)];
         [self addGestureRecognizersToPiece:button];
-    
+         ///kaka
         if ([button tag] ==28) {
             [button setCenter:CGPointMake(759.000000 ,196.000000 )];
+            [self retateButton:button lastTime:0.11];
         }
+        //chacha
         if ([button tag] ==29) {
             [button setCenter:CGPointMake(678.000000 ,165.000000 )];
+            [self retateButton:button lastTime:0.12];
+
         }
         if ([button tag] ==30) {
             [button setCenter:CGPointMake(817.000000 ,245.000000 )];
@@ -171,28 +203,38 @@
         if ([button tag] ==31) {
             [button setCenter:CGPointMake(108.000000 ,262.000000 )];
         } 
+        ///bridge
         if ([button tag] ==32) {
             [button setCenter:CGPointMake(510.049988 ,385.975006 )];
         }
-        
+        ///taotao
         if ([button tag] ==33) {
             [button setCenter:CGPointMake(454.000000 ,445.000000 )];
+            [page2View bringSubviewToFront :button];
+             [self moveButton: button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x +50,button.center.y) lastTime:5];
         } 
+        ///middle boys and girls
         if ([button tag] ==34) {
             [button setCenter:CGPointMake(523.000000 ,209.000000 )];
+            [self jumpButton : button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x,button.center.y +20) lastTime:1];
         } 
         if ([button tag] ==35) {
             [button setCenter:CGPointMake(878.000000 ,307.000000)];
+            [self retateButton:button lastTime:0.12];
+
         }
         if ([button tag] ==36) {
             [button setCenter:CGPointMake(142.200012 ,308.350006 )];
+            [self retateButton:button lastTime:0.12];
+
         }
         [page2View addSubview :button];
+       
         i++;
     }
     
     
-    NSArray * array3  = [[NSArray alloc]initWithObjects:@"20",@"21",@"22",@"23",@"24",@"25",@"26",@"27",@"19", nil];
+    NSArray * array3  = [[NSArray alloc]initWithObjects:@"20",@"21",@"22",@"23",@"24",@"25",@"26",@"27",@"19",@"40",@"41", nil];
     
     i=0;
 
@@ -214,13 +256,26 @@
         [button setFrame :CGRectMake(0,0,image.size.width * 0.85,image.size.height * 0.85)];
         [self addGestureRecognizersToPiece:button];
         
-        
+        ////taotao
         if ([button tag] ==19) {
             [button setCenter:CGPointMake(586.000000 ,546.950012 )];
-        }
+            [self jumpButton : button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x,button.center.y +20) lastTime:1];
+        }///moon
         if ([button tag] ==20) {
             [button setCenter:CGPointMake(126.800003 ,110.425003 )];
+            [self retateButton:button lastTime:0.32];
+
+        }//cloud
+        if ([button tag] ==40) {
+            [button setCenter:CGPointMake(510.900024 ,177.950012 )];
+            [self moveButton:button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x + 1000,button.center.y) lastTime:30];
         }
+        //cloud
+        if ([button tag] ==41) {
+            [button setCenter:CGPointMake(59.625000 ,58.474998 )];
+           [self moveButton:button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x + 1000,button.center.y) lastTime:20];
+        }
+        
         if ([button tag] ==21) {
             [button setCenter:CGPointMake(961.175049 ,336.924988)];
         }
@@ -243,17 +298,13 @@
         if ([button tag] ==27) {
             [button setCenter:CGPointMake(510.900024 ,457.950012 )];
         }
-       
         
-
-        
-        
-        
+               
         [page3View addSubview :button];
         i++;
     }
     
-    NSArray * array4 = [[NSArray alloc]initWithObjects:@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18", nil];
+    NSArray * array4 = [[NSArray alloc]initWithObjects:@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"41", nil];
     
     i=0;
     
@@ -274,45 +325,75 @@
         [button setImage:image forState :UIControlStateNormal];
         [button setFrame :CGRectMake(0,0,image.size.width * 0.85,image.size.height * 0.85)];
         [self addGestureRecognizersToPiece:button];
+        ////car 
         if ([button tag] ==9) {
             
             [button setCenter:CGPointMake(524.665039 ,602.512512)];
+            [self retateButton:button lastTime:0.2];
+
         }
         if ([button tag] ==10) {
             
             [button setCenter:CGPointMake(866.665039 ,460.512512)];
+            [self retateButton:button lastTime:0.2];
+
         } 
         if ([button tag] ==11) {
             
             [button setCenter:CGPointMake(173.832031 ,503.108032)];
+            [self retateButton:button lastTime:0.2];
+            [self moveButton:button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x - 100,button.center.y) lastTime:4];
+            
+
         }
         if ([button tag] ==12) {
             
             [button setCenter:CGPointMake(633.125977 ,549.828003 )];
+            [self retateButton:button lastTime:0.2];
+
         }
         if ([button tag] ==13) {
             
             [button setCenter:CGPointMake(476.139526 ,537.139526 )];
+            [self retateButton:button lastTime:0.2];
+
         }
         if ([button tag] ==14) {
             
             [button setCenter:CGPointMake(764.750000 ,514.474976)];
+            [self retateButton:button lastTime:0.2];
+
         }
         if ([button tag] ==15) {
             
             [button setCenter:CGPointMake(327.139526 ,536.139526 )];
-        }
+            
+            [self moveButton:button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x - 50,button.center.y) lastTime:4];
+        }//voice huahuahua
         if ([button tag] ==16) {
             
             [button setCenter:CGPointMake(908.549988 ,259.125000 )];
-        }
+            [self retateButton:button lastTime:0.32];
+
+            
+        }//voice huahuahua
         if ([button tag] ==17) {
             
             [button setCenter:CGPointMake(792.025024 ,366.475006 )];
-        } if ([button tag] ==18) {
+            [self retateButton:button lastTime:0.12];
+
+        }//voice huahuahua 
+        if ([button tag] ==18) {
             
             [button setCenter:CGPointMake(852.500000 ,332.075012 )];
+            [self retateButton:button lastTime:0.22];
         }
+        //cloud
+        if ([button tag] ==41) {
+            [button setCenter:CGPointMake(59.625000 ,58.474998 )];
+            [self moveButton:button from: CGPointMake(button.center.x,button.center.y) to:CGPointMake(button.center.x + 1000,button.center.y) lastTime:20];
+        }
+
         
         
 
@@ -343,23 +424,33 @@
         [button setFrame :CGRectMake(0,0,image.size.width * 0.857,image.size.height * 0.857)];
         [self addGestureRecognizersToPiece:button];
         if ([button tag] ==3) {
-            
+    
             [button setCenter:CGPointMake(774.665039 ,265.512512 )];
+            [self retateButton:button lastTime:0.2];
+
         }
         if ([button tag] ==4) {
             
             [button setCenter:CGPointMake(332.665009 ,340.512512 )];
+            [self retateButton:button lastTime:0.2];
+
         } 
         if ([button tag] ==6) {
             
             [button setCenter:CGPointMake(897.832031 ,197.108002)];
+            [self retateButton:button lastTime:0.2];
+
         }
         if ([button tag] ==7) {
             
             [button setCenter:CGPointMake(924.125977 ,280.828003 )];
+            [self retateButton:button lastTime:0.2];
+
         }if ([button tag] ==8) {
             
             [button setCenter:CGPointMake(928.139526 ,357.139496)];
+            [self retateButton:button lastTime:0.2];
+
         }
 
 
@@ -393,10 +484,13 @@
         if ([button tag] ==2) {
             
             [button setCenter:CGPointMake(451.126007,444.828003)];
+            [self retateButton:button lastTime:0.2];
+
         }
         if ([button tag] ==3) {
             
             [button setCenter:CGPointMake(775.832031 ,474.108002)];
+            [self jumpButton :button from:CGPointMake(775.832031 ,474.108002) to:CGPointMake(button.center.x,button.center.y +40) lastTime:2];
         }
         
 
@@ -404,144 +498,11 @@
         i++;
     }
     
-    
-    ///TaoTao
-    taotaoButton = [[UIButton alloc]initWithFrame:CGRectMake(580, 560, 190, 250)];
-    
-    UIImage *taotaoImage = [UIImage imageNamed:@"39.png"];
-    [taotaoButton setTag:0];
-    [taotaoButton setBackgroundImage:taotaoImage forState:UIControlStateNormal];
-    
-    [taotaoButton addTarget:self action:@selector(animalButtonWasClicked:) forControlEvents:UIControlEventTouchUpInside];
-    
-    taotaoButton.backgroundColor = [UIColor clearColor];
-    [taotaoButton setCenter:CGPointMake(550, 520)]; 
-    [taotaoButton removeFromSuperview];
-    [page1View addSubview :taotaoButton];
-
-
-    ///elephant
-    elephantButton = [[UIButton alloc]initWithFrame:CGRectMake(480, 485, 200, 300)];
-    UIImage *elephantImage = [UIImage imageNamed:@"45.png"];
-    [elephantButton setTag:1];
-    [elephantButton setBackgroundImage:elephantImage forState:UIControlStateNormal];
-    
-    [elephantButton addTarget:self 
-                       action:@selector(animalButtonWasClicked:) 
-             forControlEvents:UIControlEventTouchUpInside];
-    
-    elephantButton.backgroundColor = [UIColor clearColor];
-    [elephantButton setCenter:CGPointMake(370, 200)];
-    [elephantButton removeFromSuperview];
-    [page1View addSubview :elephantButton];
-    [elephantButton release];
-    
-    
-    ///tiger
-    tigerButton = [[UIButton alloc]initWithFrame:CGRectMake(780, 185, 240, 200)];
-    UIImage *tigerImage = [UIImage imageNamed:@"44.png"];
-    [tigerButton setTag:2];
-    
-    [tigerButton setBackgroundImage:tigerImage forState:UIControlStateNormal];
-    [tigerButton addTarget:self 
-                    action:@selector(animalButtonWasClicked:) 
-          forControlEvents:UIControlEventTouchUpInside];
-    
-    tigerButton.backgroundColor = [UIColor clearColor];
-    [tigerButton setCenter:CGPointMake(700, 100)];
-    [tigerButton removeFromSuperview];
-    [page1View addSubview :tigerButton];
-    [tigerButton release];
-    
-    ///giraffe
-    giraffeButton = [[UIButton alloc]initWithFrame:CGRectMake(680, 475, 150, 350)];
-    UIImage *giraffeImage = [UIImage imageNamed:@"37.png"];
-    [giraffeButton setTag:3];
-    [giraffeButton setBackgroundImage:giraffeImage forState:UIControlStateNormal];
-    
-    [giraffeButton addTarget:self 
-                      action:@selector(animalButtonWasClicked:) 
-            forControlEvents:UIControlEventTouchUpInside];
-    
-    giraffeButton.backgroundColor = [UIColor clearColor];
-    [giraffeButton setCenter:CGPointMake(700, 350)]; 
-    [giraffeButton removeFromSuperview];
-    [page1View addSubview :giraffeButton];
-    [giraffeButton release];
-    
-    
-    ///monkey
-    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-    UIImage *monkeyImage = [UIImage imageNamed:@"43.png"];
-    [monkeyButton setTag:4];
-    [monkeyButton setBackgroundImage:monkeyImage forState:UIControlStateNormal];
-    
-    [monkeyButton addTarget:self 
-                     action:@selector(animalButtonWasClicked:)
-           forControlEvents:UIControlEventTouchUpInside];
-    
-    monkeyButton.backgroundColor = [UIColor clearColor];
-    [monkeyButton setCenter:CGPointMake(710, 300)];  
-    [monkeyButton removeFromSuperview];
-    [page1View addSubview :monkeyButton];
-    [monkeyButton release];
-    
-
-//    ///monkey
-//    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-//    UIImage *monkeyImage1 = [UIImage imageNamed:@"4.png"];
-//    [monkeyButton setTag:4];
-//    [monkeyButton setBackgroundImage:monkeyImage1 forState:UIControlStateNormal];
-//    
-//    [monkeyButton addTarget:self 
-//                     action:@selector(animalButtonWasClicked:)
-//           forControlEvents:UIControlEventTouchUpInside];
-//    
-//    monkeyButton.backgroundColor = [UIColor clearColor];
-//    [monkeyButton setCenter:CGPointMake(710, 300)];  
-//    [monkeyButton removeFromSuperview];
-//    [page7View addSubview:monkeyButton];
-//    [page1View addSubview :monkeyButton];
-//    [monkeyButton release];
-    
-    
-    
-    
-//    ///monkey
-//    monkeyButton = [[UIButton alloc]initWithFrame:CGRectMake(700, 330, 90, 200)];
-//    UIImage *monkeyImage2 = [UIImage imageNamed:@"44.png"];
-//    [monkeyButton setTag:4];
-//    [monkeyButton setBackgroundImage:monkeyImage2 forState:UIControlStateNormal];
-//    
-//    [monkeyButton addTarget:self 
-//                     action:@selector(animalButtonWasClicked:)
-//           forControlEvents:UIControlEventTouchUpInside];
-//    
-//    monkeyButton.backgroundColor = [UIColor clearColor];
-//    [monkeyButton setCenter:CGPointMake(710, 300)];  
-//    [monkeyButton removeFromSuperview];
-//    [page7View addSubview:monkeyButton];
-////    [page1View addSubview :monkeyButton];
-//    [monkeyButton release];
-
-
-    [self addGestureRecognizersToPiece:taotaoButton];
-    [self addGestureRecognizersToPiece:elephantButton];
-    [self addGestureRecognizersToPiece:tigerButton];
-    [self addGestureRecognizersToPiece:giraffeButton];
-    [self addGestureRecognizersToPiece:monkeyButton];
-
-    
-
-       NSArray * array  = [[NSArray alloc]initWithObjects:@"37",@"1",@"43",@"44",@"45",nil];
-//        int leagueNumber = [array count];
+       NSArray * array7  = [[NSArray alloc]initWithObjects:@"37",@"1",@"43",@"44",@"45",nil];
         
         i=1;
-//        int rowIndex;
-//        int rankIndex;
-        
-        
-        for (NSString* levels in array){
+
+        for (NSString* levels in array7){
             
              NSString *title = levels;
             UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -565,22 +526,30 @@
             if ([button tag] ==1) {
             
                 [button setCenter:CGPointMake(504,261)];
+
             }
             if ([button tag] ==37) {
-                
+                //长颈鹿
                 [button setCenter:CGPointMake(603,203)];
+                [self jumpButton :button from:CGPointMake(button.center.x,button.center.y) to:CGPointMake (button.center.x,button.center.y + 40) lastTime:2];
+
             }
             if ([button tag] ==43) {
-                
+                //monkey
                 [button setCenter:CGPointMake(942,159)];
+                [self jumpButton :button from:CGPointMake(942,159) to:CGPointMake (button.center.x,button.center.y + 40) lastTime:0.4];
+
             }
+            ///tiger
             if ([button tag] ==44) {
                 
                 [button setCenter:CGPointMake(857,281)];
             }
             if ([button tag] ==45) {
-                
+                //elephant
                 [button setCenter:CGPointMake(188,195)];
+                [self moveButton:button from: CGPointMake(72.000000, 502.000000) to:CGPointMake(1096.000000,502.000000) lastTime:20];
+
 
             }
             
@@ -617,9 +586,20 @@
         default:
             break;
     }
-    [self addGestureRecognizersToPiece:_currentView];
-    [self.view addSubview:_currentView];
     
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+    }else {
+                
+        for (UIButton *button  in [_currentView subviews]) {
+        CGRect  newFrame   = CGRectMake(button.frame.origin.x * 0.439,button.frame.origin.y * 0.200,button.frame.size.width * 0.50,button.frame.size.height * 0.50);
+            button.frame =  newFrame;
+//            button.center = CGPointMake(button.frame.origin.x *0.45, button.frame.origin.y * 0.45);
+        }
+    };
+    
+    [self.view addSubview:_currentView];
+
     
     [page1View release];
     [page2View release];
@@ -638,7 +618,46 @@
 
     UIButton *button = (UIButton *)sender;
     
+    NSInteger ANIMALS ;
+    ANIMALS =  [button tag];
     
+    
+    if (ANIMALS ==44) {
+        [self PlayAudio: @"tiger"];
+
+    }else if(ANIMALS ==37){
+        
+        
+        [self PlayAudio:@"giraffe"];
+
+    }
+       else if(ANIMALS ==45){
+        
+        
+        [self  PlayAudio:@"elephant"];
+        
+    }
+    else if(ANIMALS ==43){
+        
+        
+        [self PlayAudio :@"monkey"];
+        
+    }
+    
+    else if(ANIMALS ==19 || ANIMALS ==9 || ANIMALS ==38 || ANIMALS ==3){
+        
+        
+        [self PlayAudio :@"penguin"];
+        
+    }
+    
+
+    
+
+    
+//    
+                
+
     NSLog(@"The button was clicked by %@",button);
 //   [self performSegueWithIdentifier:@"ShowDetailSegue" sender:self];  
 //
@@ -650,8 +669,21 @@
 
 
 -(void)setBottomBackground{
+    
+    CGRect  iPadFrame   = CGRectMake(0,660,1024,88);
+//    CGRect  iPhoneFrame = CGRectMake(0,280, 480, 280);
+    CGRect  iOSFrame;
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+        iOSFrame = iPadFrame;
+    }else {
+//        iOSFrame = iPhoneFrame;
+    };
+    
+    CGRect frame = iOSFrame;
 
-    UIImageView*  bottomBackground = [[UIImageView alloc]initWithFrame :CGRectMake(0,660,1024,88)];
+    UIImageView*  bottomBackground = [[UIImageView alloc]initWithFrame :frame];
+    
     UIImage *image = [UIImage imageNamed:@"Bottomground.png"];
     
     [bottomBackground setImage :image];
@@ -671,16 +703,17 @@
     
     [self setBottomBackground];
     
-    
+    [self showPage:1];
+
     [self.navigationController.navigationBar setHidden:YES];
     [self addContentsButtons:1];
-    [self showPage:1];
 
     
     
     [self.view addSubview:[self textLabel]];
     [self.view addSubview: [self pageNumberLabel]];
     
+
     
 //    [self.view addSubview: [self backButton]];
 //   [self.view bringSubviewToFront:[self backButton]];
@@ -741,8 +774,9 @@
         label.backgroundColor = [UIColor clearColor];
         [label setText:@"        One day, a penguin named Taotao came to live at the zoo.He was welcomed by all the animals.\r\n The tiger, the monkey, the elephant and the giraffe all said hello to him. \r\n “Hello,” he replied. “I am Taotao!"];
         label.numberOfLines = 0;
+
     }
-    [_textLabel setTextColor:[UIColor brownColor]];
+
     self.textLabel = label;
     [label release];
     return _textLabel;
@@ -750,7 +784,8 @@
 
 
 -(void)showPage :(NSInteger)pageNumber {
-
+    
+    
     NSString *pageN = [NSString stringWithFormat:@"%d",pageNumber];
     [_pageNumberLabel setText:pageN];
     
@@ -764,21 +799,21 @@
     NSString *page6 ;
     NSString *page7 ;
     NSArray *pageTextArray;
-    if (showEnglish) {
+    if (showEnglish ==YES) {
         page0 = [NSString stringWithFormat:@"TomCallon"];
-        page1 = [NSString stringWithFormat:@"        One day, a penguin named Taotao came to live at the zoo.He was welcomed by all the animals.\r\n The tiger, the monkey, the elephant and the giraffe all said hello to him. \r\n “Hello,” he replied. “I am Taotao!"];  
+        page1 = [NSString stringWithFormat:@"        One day, a penguin named Taotao came to live at the zoo.He was welcomed by all the animals.\r\n       The tiger, the monkey, the elephant and the giraffe all said hello to him. \r\n “Hello,” he replied. “I am Taotao!"];  
         page2 = [NSString stringWithFormat:@"        Everyone was so happy Taotao was there. All the people visiting the zoo wanted to take his picture!"];
-        page3 = [NSString stringWithFormat:@"One night the zookeeper forgot to lock Taotao’s cage door. Taotao wandered out of his cage, out of the zoo, and into the big, bright city. He didn’t know where to go! As Taotao walked and walked, the night became longer and longer. "];
+        page3 = [NSString stringWithFormat:@"         One night the zookeeper forgot to lock Taotao’s cage door. Taotao wandered out of his cage, out of the zoo, and into the big, bright city. \r\n He didn’t know where to go! As Taotao walked and walked, the night became longer and longer. "];
                  
-        page4 = [NSString stringWithFormat:@"Soon he lost track of the time - and where he was! The sun began to rise over the tops of the buildings as night turned into morning. People filled the street, and Taotao found himself blocking traffic as cars honked their horns at him!"];
+        page4 = [NSString stringWithFormat:@"       Soon he lost track of the time - and where he was! The sun began to rise over the tops of the buildings as night turned into morning. People filled the street, and Taotao found himself blocking traffic as cars honked their horns at him!"];
                  
-        page5 = [NSString stringWithFormat:@"After a while Taotao became very hungry. He came to a restaurant and asked the chef, “Please sir, can I have some fish?”.\r\nThe chef took one look at Taotao - who didn’t have even one penny in his pocket - and shook his head. Taotao kept walking."];
+        page5 = [NSString stringWithFormat:@"       After a while Taotao became very hungry. He came to a restaurant and asked the chef, “Please sir, can I have some fish?”.\r\nThe chef took one look at Taotao - who didn’t have even one penny in his pocket - and shook his head. Taotao kept walking."];
                  
-        page6= [NSString stringWithFormat:@"By this time Taotao was hungry and thirsty. Coming up to an old Granny, he asked, “Please, can I have a drink of water?”She raised her eyeglasses to see him better. Confused she said, “Who are you?”"];
+        page6= [NSString stringWithFormat:@"        By this time Taotao was hungry and thirsty. Coming up to an old Granny, he asked, “Please, can I have a drink of water?”She raised her eyeglasses to see him better. Confused she said, “Who are you?”"];
                  
-        page7 = [NSString stringWithFormat:@"Taotao had no other choice but to keep walking. His stomach was empty and his throat dry, but he pressed on. Then Taotao heard a noise. Then another. He knew those noises. It was his friends - the elephant, tiger, giraffe and monkey! He was home! Taotao followed the sounds all the way back to the zoo.“Welcome home, Taotao!” his friends said. Taotao had seen the whole city, but now he knew there was no place like home. "];
+        page7 = [NSString stringWithFormat:@"       Taotao had no other choice but to keep walking. His stomach was empty and his throat dry, but he pressed on. Then Taotao heard a noise. Then another. He knew those noises. It was his friends - the elephant, tiger, giraffe and monkey! He was home! Taotao followed the sounds all the way back to the zoo.\r\n     “Welcome home, Taotao!” his friends said. Taotao had seen the whole city, but now he knew there was no place like home. "];
 
-    }else {
+    }else if (showEnglish ==NO){
         page0 = [NSString stringWithFormat:@"TomCallon"];
         page1 = [NSString stringWithFormat:@"        今天，动物园来了一只企鹅。动物园里的老虎，大象，猴子，长颈鹿都非常高兴，纷纷跟他打招呼。\r\n大家好，我叫淘淘。”"];  
         page2 = [NSString stringWithFormat:@"        因为淘淘的出现，动物园每天都人山人海。游客们纷纷拿出相机，拍下淘淘可爱的模样。\r\n渐渐地，游客的热情减退，动物园又恢复了平静。"];
@@ -798,7 +833,7 @@
     switch (pageInteger) {
         case 1:
             frame = CGRectMake(110, 470, 320, 150);
-            playButtonframe = CGRectMake(400, 550, 70, 70);
+            playButtonframe = CGRectMake(400, 580, 70, 70);
             pageText = [pageTextArray objectAtIndex:pageInteger];
             [_textLabel setTextColor:[UIColor brownColor]];
             [_autoPlayingButton setFrame:playButtonframe];
@@ -813,7 +848,7 @@
             [_autoPlayingButton setCenter:CGPointMake(420, 160)];
             break;
         case 3:
-            frame = CGRectMake(80, 523, 390, 150);
+            frame = CGRectMake(80, 500, 390, 150);
             pageText = [pageTextArray objectAtIndex:pageInteger];
             [_textLabel setTextColor:[UIColor whiteColor]];
             playButtonframe = CGRectMake(430, 625, 70, 70);
@@ -845,7 +880,7 @@
             [_autoPlayingButton setCenter:CGPointMake(960, 190)];
             break;
         case 7:
-            frame = CGRectMake(350, 420, 320, 240);
+            frame = CGRectMake(350, 400, 320, 260);
             pageText = [pageTextArray objectAtIndex:pageInteger];
             [_textLabel setTextColor:[UIColor brownColor]];
             playButtonframe = CGRectMake(670, 680, 70, 70);
@@ -859,6 +894,19 @@
     [_textLabel setText:pageText];
     
     
+    CGRect  iPadFrame   = CGRectMake(0, 0, 1024, 680);
+    CGRect  iPhoneFrame = CGRectMake(0,0, 480, 280);
+    CGRect  iOSFrame;
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+        iOSFrame = iPadFrame;
+    }else {
+        iOSFrame = iPhoneFrame;
+    };
+    
+    CGRect theframe = iOSFrame;
+    
+
     
     [_imageView removeFromSuperview];
     pageInteger = pageNumber;
@@ -867,11 +915,12 @@
     UIImageView *imageView;
     imageView = [[UIImageView alloc]initWithImage:image];
      self.imageView = imageView;
-    [_imageView  setFrame:CGRectMake(0, 0, 1024, 680)];
+    [_imageView  setFrame:theframe];
     [self.view insertSubview:_imageView atIndex:0];
     [imageView release];
     
-    
+    [self.view bringSubviewToFront:[self autoPlayingButton]];
+
 }
 
 //-(void)addThePageController{
@@ -946,7 +995,6 @@
     [self showPage:pageInteger];
     [self addContentsButtons:pageInteger];
     [self.view bringSubviewToFront:[self autoPlayingButton]];
-//    [self.view bringSubviewToFront :[self backButton]];
 }
 
 
@@ -965,9 +1013,7 @@
     pageInteger = count +pageInteger;
     [self showPage:pageInteger];
     [self addContentsButtons:pageInteger];
-    
     [self.view bringSubviewToFront:[self autoPlayingButton]];
-//    [self.view bringSubviewToFront :[self backButton]];
 }
 
 
@@ -975,7 +1021,9 @@
 {
 
     [self TomCallonpopViewController];    
+    [self.audioPlayer pause];
 }
+
 
 - (IBAction)translationButton:(id)sender {
     
@@ -1007,9 +1055,13 @@
 
 - (UIImage *)autoPlayingImage{
 	if ([[[SF Dict] objectForKey:@"autoPlaying"] boolValue]) {
+        
 		return [UIImage imageNamed:@"stop.png"];
+        
 	} else {
+        
 		return [UIImage imageNamed:@"play.png"];
+        
 	}
 }
 
@@ -1032,10 +1084,8 @@
 	[[SF Dict] setObject:str forKey:@"autoPlaying"];
     [sender setImage:[self autoPlayingImage] forState:UIControlStateNormal];
     
-    
-    ////paue current playing music
-    [self.audioPlayer pause];
-    
+   
+        
     
     NSString *pageNumber;
     NSString *appendingString;
@@ -1076,6 +1126,11 @@
 
     [self PlayAudio:pageNumber];
     
+    if (state) {
+        ////paue current playing music
+        [self.audioPlayer pause];
+        
+    }
     
 }
 
@@ -1301,36 +1356,6 @@
         i++;
     }
     
-    
-//    if (   gestureRecognizer.view != [[self.view subviews] objectAtIndex:0] 
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:1] 
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:2]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:3]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:4]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:5]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:6]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:7]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:8]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:9]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:10]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:11]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:12]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:13]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:14]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:15]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:16]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:17]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:18]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:19]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:20]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:21]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:22]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:23]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:24]
-//        && gestureRecognizer.view != [[self.view subviews] objectAtIndex:25]
-//        )
-        
-    
     // if the gesture recognizers are on different views, don't allow simultaneous recognition
     if (gestureRecognizer.view != otherGestureRecognizer.view)
         return NO;
@@ -1343,6 +1368,66 @@
 }
 
 
+#pragma mark -
+#pragma mark === animation of the objects  ===
+#pragma mark
+
+
+-(void)retateButton :(UIButton *)button lastTime:(float)timeLength{
+    
+    CABasicAnimation *rotateButton = [CABasicAnimation animationWithKeyPath:@"transform"];
+    [rotateButton setDuration:timeLength];
+    [rotateButton setFromValue:[NSValue valueWithCATransform3D:CATransform3DMakeRotation(-0.1, 0, 0, 1)]];
+    [rotateButton setToValue:[NSValue valueWithCATransform3D:CATransform3DMakeRotation(0.1, 0, 0, 1)]];
+    [rotateButton setAutoreverses:YES];
+    [rotateButton setRepeatCount:1000000];
+    [rotateButton setRemovedOnCompletion:YES]; 
+    [rotateButton setBeginTime:CACurrentMediaTime() + 1];
+    
+    
+    [button.layer removeAllAnimations];
+    [button.layer addAnimation:rotateButton forKey:@"rotateButton"];
+
+}
+
+
+-(void)moveButton:(UIButton *)button from:(CGPoint)originalPoint to:(CGPoint) targetPoint lastTime :(float)timeLength{
+
+   CABasicAnimation *fallButtonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+   [fallButtonAnimation setDuration:timeLength];
+   [fallButtonAnimation setFromValue:[NSValue valueWithCGPoint:originalPoint]];
+   [fallButtonAnimation setToValue:[NSValue valueWithCGPoint:targetPoint]];
+   [fallButtonAnimation setFillMode:kCAFillModeForwards];
+   [fallButtonAnimation setRemovedOnCompletion:NO];    
+   fallButtonAnimation.delegate = self;
+   [fallButtonAnimation setRepeatCount :1000000];
+    
+    
+    [button.layer removeAllAnimations];
+    [button.layer addAnimation:fallButtonAnimation forKey:@"position"];
+
+
+}
+
+
+
+-(void)jumpButton:(UIButton *)button from:(CGPoint)originalPoint to:(CGPoint) targetPoint lastTime :(float)timeLength{
+    
+    CABasicAnimation *fallButtonAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    [fallButtonAnimation setDuration:timeLength];
+    [fallButtonAnimation setFromValue:[NSValue valueWithCGPoint:originalPoint]];
+    [fallButtonAnimation setToValue:[NSValue valueWithCGPoint:targetPoint]];
+    [fallButtonAnimation setFillMode:kCAFillModeForwards];
+    [fallButtonAnimation setRemovedOnCompletion:NO];    
+    fallButtonAnimation.delegate = self;
+    [fallButtonAnimation setRepeatCount :1000000];
+    
+    
+    [button.layer removeAllAnimations];
+    [button.layer addAnimation:fallButtonAnimation forKey:@"position"];
+    
+    
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

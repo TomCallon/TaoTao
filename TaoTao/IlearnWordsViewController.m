@@ -49,7 +49,19 @@
         
     }
     
-    cell.textLabel.text = [self.list objectAtIndex:indexPath.row];
+    
+     NSArray *stringArray = [NSArray arrayWithObjects:@"tiger",@"elephant",@"penguin",@"giraffe",@"monkey",@"gate",@"yellow car",@"green car",@"blue car",@"glasses",@"chef",@"blown car",@"green car",@"yellow car",@"moon",@"buldings",@"camera",@"bridge",@"kids",@"clouds",nil];
+    
+    NSString *string  = [NSString stringWithFormat:@"%@",[stringArray objectAtIndex:indexPath.row]];
+    
+    cell.textLabel.text = string;
+    
+    NSArray *imageArray = [NSArray arrayWithObjects:@"44",@"45",@"38",@"37",@"43",@"1",@"10",@"11",@"12",@"2",@"4",@"13",@"14",@"15",@"20",@"21",@"31",@"32",@"34",@"40",nil];
+    
+    
+    NSString *imageName = [NSString stringWithFormat:@"%@.png",[imageArray objectAtIndex:indexPath.row]];
+    UIImage *image =[UIImage imageNamed:imageName];
+    cell.imageView.image = image;
     return cell;
 }
 
@@ -76,9 +88,8 @@
     [self.view insertSubview:backgroundImageView atIndex:0];
     [backgroundImageView release];
     
-    self.list = [NSArray arrayWithObjects:@"tiger \n\r 老虎",@"elephant\n\r 大象",@"monkey\n\r 猴子",@"penguin \n\r 企鹅",@"zoo\n\r 动物园",@"cloud \n\r 云;云朵",nil];
-    
-    
+    self.list = [NSArray arrayWithObjects:@"44",@"45",@"38",@"37",@"1",@"10",@"11",@"12",@"2",@"4",@"13",@"14",@"15",@"20",@"21",@"31",@"32",@"34",@"40",@"43",nil];    
+  //  
 }
 
 - (void)viewDidUnload
