@@ -594,7 +594,6 @@
         for (UIButton *button  in [_currentView subviews]) {
         CGRect  newFrame   = CGRectMake(button.frame.origin.x * 0.439,button.frame.origin.y * 0.200,button.frame.size.width * 0.50,button.frame.size.height * 0.50);
             button.frame =  newFrame;
-//            button.center = CGPointMake(button.frame.origin.x *0.45, button.frame.origin.y * 0.45);
         }
     };
     
