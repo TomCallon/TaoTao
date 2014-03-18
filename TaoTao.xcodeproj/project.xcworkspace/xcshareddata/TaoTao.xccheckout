@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>194D07F9-909A-43CD-8B71-4240BF4A5708</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TaoTao</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C0FDBACF-0B45-4DAA-ABE5-3F67FFD33994</key>
+		<string>https://github.com/TomCallon/TaoTao.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TaoTao.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C0FDBACF-0B45-4DAA-ABE5-3F67FFD33994</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TomCallon/TaoTao.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C0FDBACF-0B45-4DAA-ABE5-3F67FFD33994</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C0FDBACF-0B45-4DAA-ABE5-3F67FFD33994</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TaoTao</string>
+		</dict>
+	</array>
+</dict>
+</plist>
