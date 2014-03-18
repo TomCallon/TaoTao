@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Xva-MJ-VgZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Xva-MJ-VgZ">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -19,7 +17,7 @@
                                 <rect key="frame" x="263" y="710" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="主菜单" backgroundImage="start@2x.png">
+                                <state key="normal" title="主菜单" backgroundImage="start.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,7 +32,7 @@
                                 <rect key="frame" x="943" y="724" width="64" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="next_pressed@2x.png">
+                                <state key="normal" backgroundImage="next_pressed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,7 +47,7 @@
                                 <rect key="frame" x="17" y="714" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="replay@2x.png">
+                                <state key="normal" backgroundImage="replay.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -64,7 +62,7 @@
                                 <rect key="frame" x="465" y="712" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="English" backgroundImage="continue_selection@2x.png">
+                                <state key="normal" title="English" backgroundImage="continue_selection.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -79,7 +77,7 @@
                                 <rect key="frame" x="648" y="712" width="100" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Chinese" backgroundImage="highscore@2x.png">
+                                <state key="normal" title="Chinese" backgroundImage="highscore.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -93,25 +91,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nll-lo-2XH">
                                 <rect key="frame" x="1075" y="395" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YD6-2l-6sv">
                                 <rect key="frame" x="1074" y="545" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
@@ -124,13 +112,13 @@
                         <segue destination="rAw-k2-8e8" kind="custom" identifier="ShowDetailSegue" customClass="JHCustomSegue" id="06G-SS-geO"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="200"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hbB-FN-9WL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hB6-S8-jvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rAw-k2-8e8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rgt-Zo-w51">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -146,13 +134,13 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hB6-S8-jvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2591" y="-52"/>
         </scene>
         <!--First Page View Controller-->
         <scene sceneID="upX-XT-7on">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xph-n2-DeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="5jO-wb-1vS" customClass="FirstPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qph-0P-kFh">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -161,13 +149,13 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xph-n2-DeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2515" y="891"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="0TZ-8E-AkF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BCc-k9-7Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="cCD-X9-OKm" customClass="StartViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uBI-Sb-eZN">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -177,7 +165,7 @@
                                 <rect key="frame" x="279" y="137" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Begin" backgroundImage="start@2x.png">
+                                <state key="normal" title="Begin" backgroundImage="start.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -192,7 +180,7 @@
                                 <rect key="frame" x="493" y="137" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Vabularies" backgroundImage="setting@2x.png">
+                                <state key="normal" title="Vabularies" backgroundImage="setting.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -207,7 +195,7 @@
                                 <rect key="frame" x="284" y="231" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Settings" backgroundImage="continue_selection@2x.png">
+                                <state key="normal" title="Settings" backgroundImage="continue_selection.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -222,7 +210,7 @@
                                 <rect key="frame" x="493" y="232" width="170" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="About Us" backgroundImage="highscore@2x.png">
+                                <state key="normal" title="About Us" backgroundImage="highscore.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -365,13 +353,13 @@
                         <segue destination="zbg-Mn-Gj7" kind="push" identifier="AboutUsSegue" id="bHi-in-6jF"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BCc-k9-7Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-719" y="756"/>
         </scene>
         <!--Ilearn Words View Controller-->
         <scene sceneID="3vi-Vn-NTI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ven-hf-FTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="z2a-Pi-NHZ" customClass="IlearnWordsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2eE-JL-eFp">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -381,7 +369,7 @@
                                 <rect key="frame" x="49" y="27" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Back" backgroundImage="continue_selection@2x.png">
+                                <state key="normal" title="Back" backgroundImage="continue_selection.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -392,7 +380,7 @@
                                     <action selector="backButton:" destination="z2a-Pi-NHZ" eventType="touchUpInside" id="rdo-yS-DXs"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" id="kSc-MU-oeQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" id="kSc-MU-oeQ">
                                 <rect key="frame" x="244" y="86" width="519" height="627"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -400,11 +388,10 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="87" id="ptP-kg-zXB">
                                         <rect key="frame" x="0.0" y="22" width="519" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ptP-kg-zXB" id="uqJ-uc-M3d">
                                             <rect key="frame" x="0.0" y="0.0" width="519" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -418,13 +405,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="pSv-rS-fhH"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ven-hf-FTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1363" y="1522"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="qN3-9P-1nb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JCL-kT-MOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zbg-Mn-Gj7" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bt3-Ok-tvP">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -434,7 +421,7 @@
                                 <rect key="frame" x="35" y="20" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Back" backgroundImage="setting@2x.png">
+                                <state key="normal" title="Back" backgroundImage="setting.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -491,13 +478,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="z54-iE-ciM"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JCL-kT-MOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="167" y="2667"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="rIW-by-kqE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NCU-Yd-uKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="exH-Kf-gp3" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jN4-sc-Lhc">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -507,7 +494,7 @@
                                 <rect key="frame" x="32" y="20" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Back" backgroundImage="highscore@2x.png">
+                                <state key="normal" title="Back" backgroundImage="highscore.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -531,13 +518,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="6lj-7f-yGd"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCU-Yd-uKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1375" y="2691"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jce-P3-4rQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g75-zf-nkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="Xva-MJ-VgZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -550,6 +537,7 @@
                         <segue destination="cCD-X9-OKm" kind="relationship" relationship="rootViewController" id="uZL-mz-Sez"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g75-zf-nkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1813" y="762"/>
         </scene>
@@ -562,69 +550,15 @@
         <image name="43.png" width="120" height="208"/>
         <image name="44.png" width="278" height="193"/>
         <image name="45.png" width="308" height="284"/>
-        <image name="continue_selection@2x.png" width="309" height="104"/>
-        <image name="highscore@2x.png" width="313" height="102"/>
-        <image name="next_pressed@2x.png" width="69" height="57"/>
-        <image name="replay@2x.png" width="58" height="61"/>
-        <image name="setting@2x.png" width="313" height="102"/>
-        <image name="start@2x.png" width="306" height="108"/>
+        <image name="continue_selection.png" width="154" height="52"/>
+        <image name="highscore.png" width="156" height="51"/>
+        <image name="next_pressed.png" width="34" height="28"/>
+        <image name="replay.png" width="29" height="30"/>
+        <image name="setting.png" width="156" height="51"/>
+        <image name="start.png" width="153" height="54"/>
     </resources>
-    <classes>
-        <class className="AboutUsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-            </relationships>
-        </class>
-        <class className="FirstPageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstPageViewController.h"/>
-        </class>
-        <class className="IlearnWordsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/IlearnWordsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-            </relationships>
-        </class>
-        <class className="SettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-            </relationships>
-        </class>
-        <class className="StartViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="aboutUsButton:"/>
-                <relationship kind="action" name="animalsButton:"/>
-                <relationship kind="action" name="myVacabulariesButton:"/>
-                <relationship kind="action" name="settingsButton:"/>
-                <relationship kind="action" name="startReadingButton:"/>
-                <relationship kind="outlet" name="aboutUsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cloudOneButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cloudThreeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cloudTwoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="elephantButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="girafeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="monkeyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myVacabulariesButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="settingsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startReadingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="taotaoButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tigerButon" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-                <relationship kind="action" name="pageBackButton:"/>
-                <relationship kind="action" name="pageForwardButton:"/>
-                <relationship kind="action" name="translationButton:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <nil key="statusBar"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
