@@ -60,6 +60,15 @@
 		4A903BFD154E85D100E4CDC4 /* DF.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A903BF9154E85BC00E4CDC4 /* DF.m */; };
 		4A903BFF154E864E00E4CDC4 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A903BFE154E864E00E4CDC4 /* libsqlite3.0.dylib */; };
 		4AAA42DF18D80D14004E1C60 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42DE18D80D14004E1C60 /* Default-568h@2x.png */; };
+		4AAA42EA18D81237004E1C60 /* bibibi1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E118D81237004E1C60 /* bibibi1.mp3 */; };
+		4AAA42EB18D81237004E1C60 /* bibibi2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E218D81237004E1C60 /* bibibi2.mp3 */; };
+		4AAA42EC18D81237004E1C60 /* 企鹅.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E318D81237004E1C60 /* 企鹅.mp3 */; };
+		4AAA42ED18D81237004E1C60 /* 咔嚓.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E418D81237004E1C60 /* 咔嚓.mp3 */; };
+		4AAA42EE18D81237004E1C60 /* 咕.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E518D81237004E1C60 /* 咕.mp3 */; };
+		4AAA42EF18D81237004E1C60 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E618D81237004E1C60 /* background.mp3 */; };
+		4AAA42F018D81237004E1C60 /* 大象.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E718D81237004E1C60 /* 大象.mp3 */; };
+		4AAA42F118D81237004E1C60 /* 猴子.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E818D81237004E1C60 /* 猴子.mp3 */; };
+		4AAA42F218D81237004E1C60 /* 老虎.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AAA42E918D81237004E1C60 /* 老虎.mp3 */; };
 		4AD81A6E15539CCD00C0C629 /* Bottomground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD81A5D15539CCD00C0C629 /* Bottomground.png */; };
 		4AD81A6F15539CCD00C0C629 /*  æ∑∂-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD81A5E15539CCD00C0C629 /*  æ∑∂-01.png */; };
 		4AD81A7015539CCD00C0C629 /* ∞¥≈•-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AD81A5F15539CCD00C0C629 /* ∞¥≈•-03.png */; };
@@ -155,6 +164,15 @@
 		4A903BFA154E85BC00E4CDC4 /* DF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DF.h; sourceTree = "<group>"; };
 		4A903BFE154E864E00E4CDC4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		4AAA42DE18D80D14004E1C60 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4AAA42E118D81237004E1C60 /* bibibi1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bibibi1.mp3; sourceTree = "<group>"; };
+		4AAA42E218D81237004E1C60 /* bibibi2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bibibi2.mp3; sourceTree = "<group>"; };
+		4AAA42E318D81237004E1C60 /* 企鹅.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "企鹅.mp3"; sourceTree = "<group>"; };
+		4AAA42E418D81237004E1C60 /* 咔嚓.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "咔嚓.mp3"; sourceTree = "<group>"; };
+		4AAA42E518D81237004E1C60 /* 咕.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "咕.mp3"; sourceTree = "<group>"; };
+		4AAA42E618D81237004E1C60 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		4AAA42E718D81237004E1C60 /* 大象.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "大象.mp3"; sourceTree = "<group>"; };
+		4AAA42E818D81237004E1C60 /* 猴子.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "猴子.mp3"; sourceTree = "<group>"; };
+		4AAA42E918D81237004E1C60 /* 老虎.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "老虎.mp3"; sourceTree = "<group>"; };
 		4AD81A5D15539CCD00C0C629 /* Bottomground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bottomground.png; sourceTree = "<group>"; };
 		4AD81A5E15539CCD00C0C629 /*  æ∑∂-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " æ∑∂-01.png"; sourceTree = "<group>"; };
 		4AD81A5F15539CCD00C0C629 /* ∞¥≈•-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "∞¥≈•-03.png"; sourceTree = "<group>"; };
@@ -315,6 +333,7 @@
 		4A8F21911551017100B4D4F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4AAA42E018D81237004E1C60 /* 音效 */,
 				4AD81A5C15539CCD00C0C629 /* bottomButton */,
 				4A903BCE154E541A00E4CDC4 /* Taotao Background */,
 				4A8F21931551018100B4D4F1 /* Buttons Images */,
@@ -358,6 +377,22 @@
 				4A903BD5154E541A00E4CDC4 /* 7a.png */,
 			);
 			path = "Taotao Background";
+			sourceTree = "<group>";
+		};
+		4AAA42E018D81237004E1C60 /* 音效 */ = {
+			isa = PBXGroup;
+			children = (
+				4AAA42E118D81237004E1C60 /* bibibi1.mp3 */,
+				4AAA42E218D81237004E1C60 /* bibibi2.mp3 */,
+				4AAA42E318D81237004E1C60 /* 企鹅.mp3 */,
+				4AAA42E418D81237004E1C60 /* 咔嚓.mp3 */,
+				4AAA42E518D81237004E1C60 /* 咕.mp3 */,
+				4AAA42E618D81237004E1C60 /* background.mp3 */,
+				4AAA42E718D81237004E1C60 /* 大象.mp3 */,
+				4AAA42E818D81237004E1C60 /* 猴子.mp3 */,
+				4AAA42E918D81237004E1C60 /* 老虎.mp3 */,
+			);
+			path = "音效";
 			sourceTree = "<group>";
 		};
 		4AD81A5C15539CCD00C0C629 /* bottomButton */ = {
@@ -440,13 +475,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAA42F218D81237004E1C60 /* 老虎.mp3 in Resources */,
 				4A31BCF6153DB42800C960F9 /* InfoPlist.strings in Resources */,
 				4A31BCFF153DB42800C960F9 /* MainStoryboard_iPhone.storyboard in Resources */,
 				4A31BD02153DB42800C960F9 /* MainStoryboard_iPad.storyboard in Resources */,
 				4AE23BE8154D8FC0006716E5 /* replay@2x.png in Resources */,
 				4AE23BEA154D8FC9006716E5 /* replay_pressed@2x.png in Resources */,
 				4AAA42DF18D80D14004E1C60 /* Default-568h@2x.png in Resources */,
+				4AAA42F018D81237004E1C60 /* 大象.mp3 in Resources */,
 				4AE23BEC154D8FDE006716E5 /* next_pressed@2x.png in Resources */,
+				4AAA42F118D81237004E1C60 /* 猴子.mp3 in Resources */,
 				4AE23BEE154D8FEF006716E5 /* next@2x.png in Resources */,
 				4A903BD6154E541A00E4CDC4 /* 1a.png in Resources */,
 				4A903BD8154E541A00E4CDC4 /* 3a.png in Resources */,
@@ -469,6 +507,7 @@
 				4A2AC37C154FE5D600733000 /* continue_selection_pressed@2x.png in Resources */,
 				4A8F22281551197D00B4D4F1 /* 2.mp3 in Resources */,
 				4A8F22291551197D00B4D4F1 /* 3.mp3 in Resources */,
+				4AAA42EE18D81237004E1C60 /* 咕.mp3 in Resources */,
 				4A8F222A1551197D00B4D4F1 /* 4.mp3 in Resources */,
 				4A8F222B1551197D00B4D4F1 /* 5.mp3 in Resources */,
 				4A8F222C1551197D00B4D4F1 /* 6.mp3 in Resources */,
@@ -485,13 +524,18 @@
 				4AD81A7215539CCD00C0C629 /* ∞¥≈•-05.png in Resources */,
 				4AD81A7315539CCD00C0C629 /* ∞¥≈•-06.png in Resources */,
 				4AD81A7415539CCD00C0C629 /* ∞¥≈•-07.png in Resources */,
+				4AAA42EA18D81237004E1C60 /* bibibi1.mp3 in Resources */,
+				4AAA42EC18D81237004E1C60 /* 企鹅.mp3 in Resources */,
 				4AD81A7515539CCD00C0C629 /* ∞¥≈•-08.png in Resources */,
 				4AD81A7615539CCD00C0C629 /* ∞¥≈•-09.png in Resources */,
 				4AD81A7715539CCD00C0C629 /* ∞¥≈•-10.png in Resources */,
 				4AD81A7815539CCD00C0C629 /* ∞¥≈•-11.png in Resources */,
 				4AD81A7915539CCD00C0C629 /* ∞¥≈•-12.png in Resources */,
 				4AD81A7A15539CCD00C0C629 /* ∞¥≈•-13.png in Resources */,
+				4AAA42EF18D81237004E1C60 /* background.mp3 in Resources */,
+				4AAA42EB18D81237004E1C60 /* bibibi2.mp3 in Resources */,
 				4AD81A7B15539CCD00C0C629 /* ∞¥≈•-14.png in Resources */,
+				4AAA42ED18D81237004E1C60 /* 咔嚓.mp3 in Resources */,
 				4AD81A7C15539CCD00C0C629 /* ∞¥≈•-15.png in Resources */,
 				4AD81A7D15539CCD00C0C629 /* ∞¥≈•-16.png in Resources */,
 				4AD81A7E15539CCD00C0C629 /* ∞¥≈•-17.png in Resources */,
