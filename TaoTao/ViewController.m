@@ -733,7 +733,7 @@
     [self.audioPlayer pause];
 
     UIButton *backButt;
-    if (_backButton == nil) {
+    {
     backButt = [[UIButton alloc]initWithFrame:CGRectMake(10, 10, 70, 50)];
 
     }
@@ -752,7 +752,7 @@
     CGRect frame = CGRectMake(960, 620, 50, 50);
     if (_pageNumberLabel ==nil) {
         label = [[UILabel alloc]initWithFrame:frame];
-        [label setTextAlignment:UITextAlignmentCenter];
+        [label setTextAlignment:NSTextAlignmentCenter];
         [label setText:@"1"];
         [label setTextColor:[UIColor redColor]];
         label.font = [UIFont systemFontOfSize:30];
@@ -812,7 +812,7 @@
                  
         page7 = [NSString stringWithFormat:@"       Taotao had no other choice but to keep walking. His stomach was empty and his throat dry, but he pressed on. Then Taotao heard a noise. Then another. He knew those noises. It was his friends - the elephant, tiger, giraffe and monkey! He was home! Taotao followed the sounds all the way back to the zoo.\r\n     “Welcome home, Taotao!” his friends said. Taotao had seen the whole city, but now he knew there was no place like home. "];
 
-    }else if (showEnglish ==NO){
+    }else {
         page0 = [NSString stringWithFormat:@"TomCallon"];
         page1 = [NSString stringWithFormat:@"        今天，动物园来了一只企鹅。动物园里的老虎，大象，猴子，长颈鹿都非常高兴，纷纷跟他打招呼。\r\n大家好，我叫淘淘。”"];  
         page2 = [NSString stringWithFormat:@"        因为淘淘的出现，动物园每天都人山人海。游客们纷纷拿出相机，拍下淘淘可爱的模样。\r\n渐渐地，游客的热情减退，动物园又恢复了平静。"];
@@ -827,7 +827,7 @@
         
     CGRect frame;
     CGRect playButtonframe;
-    NSString *pageText;
+    NSString *pageText = nil;
     
     switch (pageInteger) {
         case 1:
@@ -1087,7 +1087,7 @@
         
     
     NSString *pageNumber;
-    NSString *appendingString;
+    NSString *appendingString = nil;
     switch (pageInteger) {
         case 1:
             appendingString = @"1";

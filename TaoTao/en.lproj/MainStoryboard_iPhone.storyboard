@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="0Xl-FO-SIk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="0Xl-FO-SIk">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
         <scene sceneID="5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="StartViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
@@ -19,7 +17,7 @@
                                 <rect key="frame" x="143" y="69" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="已学会单词" backgroundImage="setting@2x.png">
+                                <state key="normal" title="已学会单词" backgroundImage="setting.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,7 +32,7 @@
                                 <rect key="frame" x="277" y="69" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="设定" backgroundImage="continue_selection@2x.png">
+                                <state key="normal" title="设定" backgroundImage="continue_selection.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,7 +47,7 @@
                                 <rect key="frame" x="210" y="110" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="关于我们" backgroundImage="highscore@2x.png">
+                                <state key="normal" title="关于我们" backgroundImage="highscore.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,7 +107,7 @@
                                 <rect key="frame" x="212" y="30" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="开始阅读" backgroundImage="start@2x.png">
+                                <state key="normal" title="开始阅读" backgroundImage="start.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -210,13 +208,13 @@
                         <segue destination="FBq-mz-ZUP" kind="push" identifier="AboutUsSegue" id="7Ze-1j-bEz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="688" y="-67"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zgt-M7-L51">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B9v-AF-GVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="dVN-Jg-dNW" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KIn-dA-9CK">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
@@ -226,7 +224,7 @@
                                 <rect key="frame" x="0.0" y="281" width="80" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="back" image="back_pressed@2x.png">
+                                <state key="normal" title="back" image="back_pressed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -241,7 +239,7 @@
                                 <rect key="frame" x="400" y="281" width="80" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Next" image="next@2x.png">
+                                <state key="normal" title="Next" image="next.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -256,7 +254,7 @@
                                 <rect key="frame" x="108" y="281" width="80" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Home" backgroundImage="highscore@2x.png">
+                                <state key="normal" title="Home" backgroundImage="highscore.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -271,7 +269,7 @@
                                 <rect key="frame" x="303" y="281" width="80" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Chinese" backgroundImage="setting@2x.png">
+                                <state key="normal" title="Chinese" backgroundImage="setting.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -286,7 +284,7 @@
                                 <rect key="frame" x="207" y="281" width="80" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="English" backgroundImage="continue_selection@2x.png">
+                                <state key="normal" title="English" backgroundImage="continue_selection.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -303,13 +301,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="SXh-PG-Pf7"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9v-AF-GVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1298" y="-673"/>
         </scene>
         <!--Ilearn Words View Controller-->
         <scene sceneID="dPj-Pl-BST">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Amy-fL-qEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="yCD-ef-Y5d" customClass="IlearnWordsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JqD-wh-kwk">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
@@ -319,7 +317,7 @@
                                 <rect key="frame" x="5" y="0.0" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="back_pressed@2x.png">
+                                <state key="normal" backgroundImage="back_pressed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -330,7 +328,7 @@
                                     <action selector="backButton:" destination="yCD-ef-Y5d" eventType="touchUpInside" id="cQI-oi-avc"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B81-cR-EWS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B81-cR-EWS">
                                 <rect key="frame" x="101" y="35" width="290" height="249"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -345,13 +343,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="K8o-mY-g6R"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Amy-fL-qEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1298" y="-260"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="ovF-lX-KOA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YDn-rM-T5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="FBq-mz-ZUP" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPC-dE-a2W">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
@@ -401,7 +399,7 @@
                                 <rect key="frame" x="8" y="5" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="back_pressed@2x.png">
+                                <state key="normal" backgroundImage="back_pressed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -418,13 +416,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="eHT-5V-7rY"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDn-rM-T5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1304" y="627"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="eQ9-ei-X0r">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9k3-lK-fux" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1wp-mo-cGk" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LEl-rb-R9w">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
@@ -434,7 +432,7 @@
                                 <rect key="frame" x="5" y="5" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="back_pressed@2x.png">
+                                <state key="normal" backgroundImage="back_pressed.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -458,13 +456,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="nG4-44-V3u"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9k3-lK-fux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1304" y="178"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BIs-Em-mOO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HDK-Ky-swp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="0Xl-FO-SIk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5bE-n5-Hrj">
@@ -476,6 +474,7 @@
                         <segue destination="2" kind="relationship" relationship="rootViewController" id="pEl-2E-vRM"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDK-Ky-swp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150" y="-59"/>
         </scene>
@@ -489,15 +488,15 @@
         <image name="43.png" width="120" height="208"/>
         <image name="44.png" width="278" height="193"/>
         <image name="45.png" width="308" height="284"/>
-        <image name="back_pressed@2x.png" width="69" height="57"/>
-        <image name="continue_selection@2x.png" width="309" height="104"/>
-        <image name="highscore@2x.png" width="313" height="102"/>
-        <image name="next@2x.png" width="69" height="57"/>
-        <image name="setting@2x.png" width="313" height="102"/>
-        <image name="start@2x.png" width="306" height="108"/>
+        <image name="back_pressed.png" width="34" height="28"/>
+        <image name="continue_selection.png" width="154" height="52"/>
+        <image name="highscore.png" width="156" height="51"/>
+        <image name="next.png" width="34" height="28"/>
+        <image name="setting.png" width="156" height="51"/>
+        <image name="start.png" width="153" height="54"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <nil key="statusBar"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

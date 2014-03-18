@@ -20,8 +20,6 @@
 #pragma mark -
 #pragma mark 以下方法不建议进行重写
 
-
-
 //自定义md5加密,与公认的md5不同
 + (NSString *) md5:(NSString*)str{
     const char *cStr = [str UTF8String];
@@ -119,7 +117,7 @@
     
     
     
-	NSString *sn = [self md5:[NSString stringWithFormat:@"%d",udid]]; //随机数加密串
+	NSString *sn = [self md5:[NSString stringWithFormat:@"%@",udid]]; //随机数加密串
 	NSString *str = [NSString stringWithFormat:@"%@%@%@", sn, privateKeyString, udid];
 	NSString *m32 = [self md5:[self md5:str]];
 	NSArray *objs = [NSArray arrayWithObjects:sn,m32,nil];
