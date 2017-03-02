@@ -108,6 +108,7 @@
     ////play background Musics
     [self playBackgroundMusic];
     
+    NSLog(@"asdlf;asdfjkaskjdf;asdfladls");
 
 }
 
